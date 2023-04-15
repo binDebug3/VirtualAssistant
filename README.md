@@ -66,33 +66,7 @@ Future functionality will include:
 <hr>
 
 ### Instructions for Download
-You'll need to start by downloading a few python packages with these commands or following the
-instructions for use below.
-- pip install <a href=''>speech_recognition</a>
-- pip install <a href=''>pyttsx3</a>
-
-
-- pip install <a href=''>wolframalpha</a>
-- pip install <a href=''>todoist_api_python</a>
-- pip install <a href=''>googleapiclient</a>
-- pip install <a href=''>google_auth_oauthlib</a>
-- pip install <a href=''>wikipedia</a>
-
-
-- pip install <a href=https://selenium-python.readthedocs.io/installation.html>selenium</a>
-- pip install <a href=''>webbrowser</a>
-- pip install <a href=''>urllib</a>
-- pip install <a href=''>requests</a>
-- pip install <a href=''>pyjokes</a>
-- pip install <a href=''>pywhatkit</a>
-
-
-- pip install <a href=''>psutil</a>
-- pip install <a href=''>pytz</a>
-- pip install <a href=https://pandas.pydata.org/docs/getting_started/install.html>pandas</a>
-- pip install <a href=''>geopy</a>
-- pip install <a href=''>geocoder</a>
-- pip install <a href=''>smtplib</a>
+You'll need to start by downloading a few python packages in requirements.txt.
 
 You can then <a href=https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
 clone this project</a> to your own machine from GitHub and then run the webscraper in any Python development environment.
