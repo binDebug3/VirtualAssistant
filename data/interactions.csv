@@ -1,0 +1,1153 @@
+Date,Time,Milli,Level,Message
+2023-04-08,11:54:17,160,INFO,Startup complete
+2023-04-08,11:54:29,787,INFO,User said: lila power down
+2023-04-08,11:55:53,582,INFO,Startup complete
+2023-04-08,11:56:49,185,INFO,Startup complete
+2023-04-08,11:56:56,997,INFO,User said: i'm testing a logging feature for the virtual assistant
+2023-04-08,11:57:03,476,INFO,User said: lila power down
+2023-04-08,11:57:50,903,INFO,Startup complete
+2023-04-08,11:57:55,637,INFO,User said: sure the logging c
+2023-04-08,11:58:10,076,INFO,User said: well i want to make sure the logging csv does not duplicate logs
+2023-04-08,11:58:15,933,INFO,User said: play the power down
+2023-04-08,11:58:22,709,INFO,User said: lila power down
+2023-04-08,12:08:19,172,INFO,Startup complete
+2023-04-08,12:08:26,776,INFO,User said: i'm taking inventory of what the virtual assistant can do right now
+2023-04-08,12:08:26,776,ERROR,Action: No keyword found
+2023-04-08,12:08:32,172,INFO,User said: what is the time lila
+2023-04-08,12:08:34,462,INFO,Action: Told the time
+2023-04-08,12:08:34,462,ERROR,Action: Command not recognized
+2023-04-08,12:08:34,462,ERROR,Action: No keyword found
+2023-04-08,12:08:42,975,INFO,User said: lila what is the date
+2023-04-08,12:08:46,005,INFO,Action: Told the date
+2023-04-08,12:08:46,005,ERROR,Action: Command not recognized
+2023-04-08,12:08:46,005,ERROR,Action: No keyword found
+2023-04-08,12:14:10,207,INFO,Startup complete
+2023-04-08,12:14:16,073,INFO,User said: lila open google.com
+2023-04-08,12:14:19,736,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,12:14:19,736,ERROR,Action: Command not recognized
+2023-04-08,12:14:19,736,ERROR,Action: No keyword found
+2023-04-08,12:14:27,110,INFO,User said: why the what is the weather in provo utah
+2023-04-08,12:14:27,110,ERROR,Action: No keyword found
+2023-04-08,12:14:35,814,INFO,User said: my love what is the weather in provo utah
+2023-04-08,12:14:35,814,ERROR,Action: No keyword found
+2023-04-08,12:14:43,934,INFO,User said: hey lila what is the weather in provo utah
+2023-04-08,12:14:45,827,INFO,Action: Told the weather
+2023-04-08,12:14:45,827,ERROR,Action: Command not recognized
+2023-04-08,12:14:45,827,ERROR,Action: No keyword found
+2023-04-08,12:14:52,240,INFO,User said: hello tell me about
+2023-04-08,12:14:52,240,ERROR,Action: No keyword found
+2023-04-08,12:15:08,012,INFO,User said: hey lila tell me about mark rober
+2023-04-08,12:15:11,843,INFO,Action: Told the user about tell me about mark rober
+2023-04-08,12:15:11,843,ERROR,Action: Command not recognized
+2023-04-08,12:15:11,843,ERROR,Action: No keyword found
+2023-04-08,12:16:01,328,INFO,User said: layla tell me about tim cook
+2023-04-08,12:16:27,145,INFO,Action: Told the user about me about tim cook
+2023-04-08,12:16:27,145,ERROR,Action: Command not recognized
+2023-04-08,12:16:27,145,ERROR,Action: No keyword found
+2023-04-08,12:16:43,359,INFO,User said: hey lila search google for apples
+2023-04-08,12:18:13,914,INFO,Startup complete
+2023-04-08,12:18:20,225,INFO,User said: hey lila send an email
+2023-04-08,12:18:45,342,INFO,Action: Sent an email to myself
+2023-04-08,12:18:45,342,ERROR,Action: Command not recognized
+2023-04-08,12:18:45,342,ERROR,Action: No keyword found
+2023-04-08,12:21:21,160,INFO,User said: hey lila
+2023-04-08,12:21:22,983,INFO,Action: Greeted the user
+2023-04-08,12:21:22,983,ERROR,Action: Command not recognized
+2023-04-08,12:21:22,983,ERROR,Action: No keyword found
+2023-04-08,12:21:28,492,INFO,User said: hey lila calculate 2 + 2
+2023-04-08,12:21:34,688,INFO,Action: Calculated hey lila calculate 2 + 2
+2023-04-08,12:21:34,689,ERROR,Action: Command not recognized
+2023-04-08,12:21:34,689,ERROR,Action: No keyword found
+2023-04-08,12:21:56,525,INFO,User said: hey lila check my calendar
+2023-04-08,12:22:13,842,INFO,Startup complete
+2023-04-08,12:22:19,738,INFO,User said: hey leila take a note
+2023-04-08,12:22:54,627,INFO,Startup complete
+2023-04-08,12:22:59,775,INFO,User said: delilah tell me a joke
+2023-04-08,12:23:06,236,INFO,Action: Told a joke
+2023-04-08,12:23:06,236,ERROR,Action: Command not recognized
+2023-04-08,12:23:06,236,ERROR,Action: No keyword found
+2023-04-08,12:23:35,013,INFO,User said: hey lila system info
+2023-04-08,12:23:45,956,INFO,Action: Told the system info
+2023-04-08,12:23:45,956,ERROR,Action: Command not recognized
+2023-04-08,12:23:45,956,ERROR,Action: No keyword found
+2023-04-08,12:24:05,916,INFO,User said: hey lila what is my ip address
+2023-04-08,12:24:12,232,INFO,Action: Answered hey lila what is my ip address
+2023-04-08,12:24:12,232,ERROR,Action: Command not recognized
+2023-04-08,12:24:12,232,ERROR,Action: No keyword found
+2023-04-08,12:24:18,579,INFO,User said: hey lila tell me my ip address
+2023-04-08,12:24:24,713,INFO,Action: Told the user's IP address
+2023-04-08,12:24:24,713,ERROR,Action: Command not recognized
+2023-04-08,12:24:24,713,ERROR,Action: No keyword found
+2023-04-08,12:24:43,543,INFO,User said: hey lila where is provo utah
+2023-04-08,12:24:44,931,WARNING,"Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(""HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"")': /search?q=+provo+utah&format=json&limit=1&addressdetails=1"
+2023-04-08,12:24:45,098,INFO,Received an HTTP error (502): <html>
+2023-04-08,12:25:22,121,INFO,Startup complete
+2023-04-08,12:25:26,828,INFO,User said: taylor switch window
+2023-04-08,12:25:26,828,ERROR,Action: No keyword found
+2023-04-08,12:25:32,797,INFO,User said: delilah switch window
+2023-04-08,12:25:36,811,INFO,Action: Switched window
+2023-04-08,12:25:36,811,ERROR,Action: Command not recognized
+2023-04-08,12:25:36,811,ERROR,Action: No keyword found
+2023-04-08,12:26:11,393,INFO,User said: atlanta take a screenshot
+2023-04-08,12:26:11,393,ERROR,Action: No keyword found
+2023-04-08,12:26:18,338,INFO,User said: hey lila take a screenshot
+2023-04-08,12:26:18,338,ERROR,Action: Command not recognized
+2023-04-08,12:26:18,338,ERROR,Action: No keyword found
+2023-04-08,12:26:34,586,INFO,User said: hey lila take screenshot
+2023-04-08,12:26:48,746,INFO,User said: hey lila what can you do
+2023-04-08,12:26:58,224,INFO,Action: Told the user what the Lila can do
+2023-04-08,12:26:58,224,ERROR,Action: Command not recognized
+2023-04-08,12:26:58,224,ERROR,Action: No keyword found
+2023-04-08,12:27:06,953,INFO,User said: hey lila power down
+2023-04-08,12:27:09,611,INFO,Action: Powered down
+2023-04-08,12:39:17,051,INFO,Startup complete
+2023-04-08,12:39:24,112,INFO,User said: hey lila open slack
+2023-04-08,12:39:27,986,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,12:39:27,986,ERROR,Action: Command not recognized
+2023-04-08,12:39:27,986,ERROR,Action: No keyword found
+2023-04-08,12:40:45,060,INFO,Startup complete
+2023-04-08,12:40:50,114,INFO,User said: hey lila open slack
+2023-04-08,12:40:53,671,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,12:40:53,671,ERROR,Action: Command not recognized
+2023-04-08,12:40:53,671,ERROR,Action: No keyword found
+2023-04-08,12:41:03,139,INFO,User said: featuring ohio
+2023-04-08,12:41:03,139,ERROR,Action: No keyword found
+2023-04-08,12:42:11,462,INFO,Startup complete
+2023-04-08,12:42:15,582,INFO,User said: open sl
+2023-04-08,12:42:15,582,ERROR,Action: No keyword found
+2023-04-08,12:42:23,053,INFO,User said: hey lila open slack
+2023-04-08,12:42:27,575,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,12:42:27,575,ERROR,Action: Command not recognized
+2023-04-08,12:42:27,575,ERROR,Action: No keyword found
+2023-04-08,12:42:58,875,INFO,Startup complete
+2023-04-08,12:43:05,425,INFO,User said: hey lila open slack
+2023-04-08,12:43:08,254,INFO,Action: Opened slack for the user
+2023-04-08,12:43:08,254,ERROR,Action: Command not recognized
+2023-04-08,12:43:08,254,ERROR,Action: No keyword found
+2023-04-08,12:43:31,051,INFO,Startup complete
+2023-04-08,12:43:36,389,INFO,User said: hey lila open slack
+2023-04-08,12:43:38,845,INFO,Action: Opened slack for the user
+2023-04-08,12:43:38,845,ERROR,Action: Command not recognized
+2023-04-08,12:43:38,845,ERROR,Action: No keyword found
+2023-04-08,12:44:00,609,INFO,Startup complete
+2023-04-08,12:44:06,979,INFO,User said: hey lila open slack
+2023-04-08,12:44:09,461,INFO,Action: Opened slack for the user
+2023-04-08,12:44:09,461,ERROR,Action: Command not recognized
+2023-04-08,12:44:09,461,ERROR,Action: No keyword found
+2023-04-08,12:50:39,822,INFO,Startup complete
+2023-04-08,12:50:45,309,INFO,User said: hey lila open slack
+2023-04-08,12:50:47,817,INFO,Action: Opened slack for the user
+2023-04-08,12:50:47,817,ERROR,Action: Command not recognized
+2023-04-08,12:50:47,817,ERROR,Action: No keyword found
+2023-04-08,12:51:51,624,INFO,User said: hey lila power down
+2023-04-08,12:51:55,058,INFO,Action: Powered down
+2023-04-08,13:04:29,258,INFO,Startup complete
+2023-04-08,13:04:34,787,INFO,User said: silent open chrome
+2023-04-08,13:04:34,787,ERROR,Action: No keyword found
+2023-04-08,13:04:40,979,INFO,User said: hey lila open chrome
+2023-04-08,13:04:43,792,INFO,Action: Opened chrome for the user
+2023-04-08,13:04:43,792,ERROR,Action: Command not recognized
+2023-04-08,13:04:43,792,ERROR,Action: No keyword found
+2023-04-08,13:04:52,667,INFO,User said: violet open discord
+2023-04-08,13:04:52,667,ERROR,Action: No keyword found
+2023-04-08,13:05:00,094,INFO,User said: hey tyler open discord
+2023-04-08,13:05:00,094,ERROR,Action: No keyword found
+2023-04-08,13:05:09,163,INFO,User said: hey lila open discord
+2023-04-08,13:05:11,991,INFO,Action: Opened discord for the user
+2023-04-08,13:05:11,992,ERROR,Action: Command not recognized
+2023-04-08,13:05:11,992,ERROR,Action: No keyword found
+2023-04-08,13:06:08,121,INFO,User said: hey lila open snipping tool
+2023-04-08,13:06:12,185,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:06:12,185,ERROR,Action: Command not recognized
+2023-04-08,13:06:12,185,ERROR,Action: No keyword found
+2023-04-08,13:06:26,731,INFO,User said: hey lila open python
+2023-04-08,13:06:29,117,INFO,Action: Opened python for the user
+2023-04-08,13:06:29,117,ERROR,Action: Command not recognized
+2023-04-08,13:06:29,117,ERROR,Action: No keyword found
+2023-04-08,13:06:40,122,INFO,User said: hey lila open java
+2023-04-08,13:06:42,751,INFO,Action: Opened java for the user
+2023-04-08,13:06:42,751,ERROR,Action: Command not recognized
+2023-04-08,13:06:42,751,ERROR,Action: No keyword found
+2023-04-08,13:07:13,682,INFO,User said: delilah looking super
+2023-04-08,13:07:13,682,ERROR,Action: Command not recognized
+2023-04-08,13:07:13,682,ERROR,Action: No keyword found
+2023-04-08,13:07:23,958,INFO,User said: verizon open last plus
+2023-04-08,13:07:23,958,ERROR,Action: No keyword found
+2023-04-08,13:07:32,864,INFO,User said: hey mama open bash
+2023-04-08,13:07:32,864,ERROR,Action: No keyword found
+2023-04-08,13:07:40,577,INFO,User said: minor open bash
+2023-04-08,13:07:40,577,ERROR,Action: No keyword found
+2023-04-08,13:07:46,428,INFO,User said: lila open bash
+2023-04-08,13:07:50,625,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:07:50,625,ERROR,Action: Command not recognized
+2023-04-08,13:07:50,625,ERROR,Action: No keyword found
+2023-04-08,13:08:22,418,INFO,User said: hey lila open zoom
+2023-04-08,13:08:25,370,INFO,Action: Opened zoom for the user
+2023-04-08,13:08:25,370,ERROR,Action: Command not recognized
+2023-04-08,13:08:25,370,ERROR,Action: No keyword found
+2023-04-08,13:09:23,010,INFO,Startup complete
+2023-04-08,13:09:30,688,INFO,User said: weather you think command prompt
+2023-04-08,13:09:30,688,ERROR,Action: No keyword found
+2023-04-08,13:09:37,993,INFO,User said: liner open command prompt
+2023-04-08,13:09:37,993,ERROR,Action: No keyword found
+2023-04-08,13:09:47,794,INFO,User said: lila open command prompt
+2023-04-08,13:09:52,020,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:09:52,020,ERROR,Action: Command not recognized
+2023-04-08,13:09:52,020,ERROR,Action: No keyword found
+2023-04-08,13:11:05,426,INFO,Startup complete
+2023-04-08,13:11:11,585,INFO,User said: driver open command prompt
+2023-04-08,13:11:11,585,ERROR,Action: No keyword found
+2023-04-08,13:11:18,682,INFO,User said: lila open command prompt
+2023-04-08,13:11:22,796,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:11:22,796,ERROR,Action: Command not recognized
+2023-04-08,13:11:22,796,ERROR,Action: No keyword found
+2023-04-08,13:14:32,153,INFO,Startup complete
+2023-04-08,13:14:38,480,INFO,User said: lila open command prompt
+2023-04-08,13:14:42,744,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:14:42,744,ERROR,Action: Command not recognized
+2023-04-08,13:14:42,744,ERROR,Action: No keyword found
+2023-04-08,13:14:51,657,INFO,User said: myla open control panel
+2023-04-08,13:14:51,657,ERROR,Action: No keyword found
+2023-04-08,13:15:06,915,INFO,User said: leather open control panel
+2023-04-08,13:15:06,915,ERROR,Action: No keyword found
+2023-04-08,13:15:20,662,INFO,User said: lila open control panel
+2023-04-08,13:15:25,081,ERROR,Action: Tried to open an application that doesn't exist
+2023-04-08,13:15:25,081,ERROR,Action: Command not recognized
+2023-04-08,13:15:25,081,ERROR,Action: No keyword found
+2023-04-08,13:15:39,933,INFO,User said: leila power down
+2023-04-08,13:15:43,233,INFO,Action: Powered down
+2023-04-08,14:11:55,724,INFO,Startup complete
+2023-04-08,14:12:03,108,INFO,User said: lila open control panel
+2023-04-08,14:12:06,111,INFO,Action: Opened control panel for the user
+2023-04-08,14:12:06,111,ERROR,Action: Command not recognized
+2023-04-08,14:12:06,112,ERROR,Action: No keyword found
+2023-04-08,14:12:15,880,INFO,User said: milo open file explorer
+2023-04-08,14:12:18,880,INFO,Action: Opened file explorer for the user
+2023-04-08,14:12:18,880,ERROR,Action: Command not recognized
+2023-04-08,14:12:18,880,ERROR,Action: No keyword found
+2023-04-08,14:12:28,906,INFO,User said: hello open command prompt
+2023-04-08,14:12:28,906,ERROR,Action: No keyword found
+2023-04-08,14:12:35,731,INFO,User said: lila open command prompt
+2023-04-08,14:12:42,729,ERROR,Action: Tried to open an application that doesn't exist: command prompt
+2023-04-08,14:12:42,729,ERROR,Action: Command not recognized
+2023-04-08,14:12:42,729,ERROR,Action: No keyword found
+2023-04-08,14:12:49,743,INFO,User said: lila open bash
+2023-04-08,14:12:52,089,INFO,Action: Opened bash for the user
+2023-04-08,14:12:52,089,ERROR,Action: Command not recognized
+2023-04-08,14:12:52,089,ERROR,Action: No keyword found
+2023-04-08,14:13:13,557,INFO,User said: why not open c++
+2023-04-08,14:13:13,557,ERROR,Action: No keyword found
+2023-04-08,14:13:21,188,INFO,User said: lima open c++
+2023-04-08,14:13:21,188,ERROR,Action: No keyword found
+2023-04-08,14:13:30,861,INFO,User said: lila open c++
+2023-04-08,14:13:33,934,INFO,Action: Opened c++ for the user
+2023-04-08,14:13:33,934,ERROR,Action: Command not recognized
+2023-04-08,14:13:33,934,ERROR,Action: No keyword found
+2023-04-08,14:14:21,050,INFO,User said: lila open to-do list
+2023-04-08,14:14:23,554,INFO,Action: Opened to-do list for the user
+2023-04-08,14:14:23,554,ERROR,Action: Command not recognized
+2023-04-08,14:14:23,554,ERROR,Action: No keyword found
+2023-04-08,14:14:37,642,INFO,User said: lila open outlook
+2023-04-08,14:14:41,896,ERROR,Action: Tried to open an application that doesn't exist: Not found
+2023-04-08,14:14:41,896,ERROR,Action: Command not recognized
+2023-04-08,14:14:41,896,ERROR,Action: No keyword found
+2023-04-08,14:15:40,176,INFO,User said: wireless switch window
+2023-04-08,14:15:40,176,ERROR,Action: No keyword found
+2023-04-08,14:15:46,586,INFO,User said: wireless switch window
+2023-04-08,14:15:46,586,ERROR,Action: No keyword found
+2023-04-08,14:15:54,849,INFO,User said: wireless switch window
+2023-04-08,14:15:54,850,ERROR,Action: No keyword found
+2023-04-08,14:34:45,299,INFO,Startup complete
+2023-04-08,14:34:52,815,INFO,User said: run casper
+2023-04-08,14:34:52,815,ERROR,Action: No keyword found
+2023-04-08,14:35:00,266,INFO,User said: lila run casper
+2023-04-08,14:35:00,266,ERROR,Action: Tried to run a program that doesn't exist: Not found
+2023-04-08,14:35:00,266,ERROR,Action: Command not recognized
+2023-04-08,14:35:00,266,ERROR,Action: No keyword found
+2023-04-08,14:35:52,868,INFO,Startup complete
+2023-04-08,14:36:17,191,INFO,Startup complete
+2023-04-08,14:36:23,544,INFO,User said: run casper
+2023-04-08,14:36:23,544,ERROR,Action: Tried to run a program that doesn't exist: Not found
+2023-04-08,14:36:23,544,ERROR,Action: Command not recognized
+2023-04-08,14:36:23,544,ERROR,Action: No keyword found
+2023-04-08,14:37:23,879,INFO,Startup complete
+2023-04-08,14:37:29,228,INFO,User said: run casper
+2023-04-08,14:37:29,309,INFO,Action: Opened casper for the user
+2023-04-08,14:37:29,309,ERROR,Action: Command not recognized
+2023-04-08,14:37:29,309,ERROR,Action: No keyword found
+2023-04-08,14:38:02,619,INFO,User said: run the dashboard
+2023-04-08,14:38:02,669,INFO,Action: Opened dashboard for the user
+2023-04-08,14:38:02,669,ERROR,Action: Command not recognized
+2023-04-08,14:38:02,669,ERROR,Action: No keyword found
+2023-04-08,14:38:39,401,INFO,User said: open google
+2023-04-08,14:38:39,401,ERROR,Action: Tried to open an application that doesn't exist: Not found
+2023-04-08,14:38:39,401,ERROR,Action: Command not recognized
+2023-04-08,14:38:39,401,ERROR,Action: No keyword found
+2023-04-08,14:38:55,947,INFO,User said: open chrome
+2023-04-08,14:38:55,950,INFO,Action: Opened chrome for the user
+2023-04-08,14:38:55,950,ERROR,Action: Command not recognized
+2023-04-08,14:38:55,950,ERROR,Action: No keyword found
+2023-04-08,14:39:05,340,INFO,User said: open discord
+2023-04-08,14:39:05,340,ERROR,Action: Tried to open an application that doesn't exist: discord
+2023-04-08,14:39:05,340,ERROR,Action: Command not recognized
+2023-04-08,14:39:05,341,ERROR,Action: No keyword found
+2023-04-08,14:40:36,105,INFO,User said: open to-do list
+2023-04-08,14:40:36,105,ERROR,Action: Tried to open an application that doesn't exist: Not found
+2023-04-08,14:40:36,105,ERROR,Action: Command not recognized
+2023-04-08,14:40:36,105,ERROR,Action: No keyword found
+2023-04-08,14:40:52,288,INFO,User said: open outlook
+2023-04-08,14:40:52,326,INFO,Action: Opened outlook for the user
+2023-04-08,14:40:52,326,ERROR,Action: Command not recognized
+2023-04-08,14:40:52,326,ERROR,Action: No keyword found
+2023-04-08,14:41:20,171,INFO,User said: open jupiter
+2023-04-08,14:41:20,183,INFO,Action: Opened jupiter for the user
+2023-04-08,14:41:20,183,ERROR,Action: Command not recognized
+2023-04-08,14:41:20,183,ERROR,Action: No keyword found
+2023-04-08,14:49:55,087,INFO,Startup complete
+2023-04-08,14:49:59,261,INFO,User said: run casper
+2023-04-08,14:49:59,261,ERROR,Action: Tried to run a program that doesn't exist: casper
+2023-04-08,14:49:59,261,ERROR,Action: Command not recognized
+2023-04-08,14:49:59,261,ERROR,Action: No keyword found
+2023-04-08,14:51:29,003,INFO,Startup complete
+2023-04-08,14:51:34,842,INFO,User said: run dashboard
+2023-04-08,14:51:34,842,ERROR,Action: Tried to run a program that doesn't exist: dashboard
+2023-04-08,14:51:34,842,ERROR,Action: Command not recognized
+2023-04-08,14:51:34,842,ERROR,Action: No keyword found
+2023-04-08,14:51:49,998,INFO,Startup complete
+2023-04-08,14:51:55,195,INFO,User said: run the dashboard
+2023-04-08,15:01:36,722,INFO,Startup complete
+2023-04-08,15:01:44,010,INFO,User said: run dashboard
+2023-04-08,15:01:44,059,INFO,Action: Opened dashboard for the user
+2023-04-08,15:01:44,059,ERROR,Action: Command not recognized
+2023-04-08,15:01:44,059,ERROR,Action: No keyword found
+2023-04-08,15:02:04,430,INFO,Startup complete
+2023-04-08,15:02:07,594,INFO,User said: run dashboard
+2023-04-08,15:02:07,651,INFO,Action: Opened dashboard for the user
+2023-04-08,15:02:07,651,ERROR,Action: Command not recognized
+2023-04-08,15:02:07,651,ERROR,Action: No keyword found
+2023-04-08,15:02:30,947,INFO,Startup complete
+2023-04-08,15:02:35,409,INFO,User said: run dashboard
+2023-04-08,15:02:35,452,INFO,Action: Opened dashboard for the user
+2023-04-08,15:02:35,452,ERROR,Action: Command not recognized
+2023-04-08,15:02:35,452,ERROR,Action: No keyword found
+2023-04-08,15:03:03,773,INFO,Startup complete
+2023-04-08,15:03:08,673,INFO,User said: run dashboard
+2023-04-08,15:03:08,715,INFO,Action: Opened dashboard for the user
+2023-04-08,15:03:08,715,ERROR,Action: Command not recognized
+2023-04-08,15:03:08,715,ERROR,Action: No keyword found
+2023-04-08,15:03:46,201,INFO,Startup complete
+2023-04-08,15:03:49,652,INFO,User said: run dashbaord
+2023-04-08,15:03:49,653,ERROR,Action: Tried to run a program that doesn't exist: Not found
+2023-04-08,15:03:49,653,ERROR,Action: Command not recognized
+2023-04-08,15:03:49,653,ERROR,Action: No keyword found
+2023-04-08,15:03:55,665,INFO,User said: run dashboard
+2023-04-08,15:03:55,710,INFO,Action: Opened dashboard for the user
+2023-04-08,15:03:55,710,ERROR,Action: Command not recognized
+2023-04-08,15:03:55,710,ERROR,Action: No keyword found
+2023-04-08,15:04:48,932,INFO,Startup complete
+2023-04-08,15:04:54,110,INFO,User said: run dashboard
+2023-04-08,15:04:54,151,INFO,Action: Opened dashboard for the user
+2023-04-08,15:04:54,151,ERROR,Action: Command not recognized
+2023-04-08,15:04:54,151,ERROR,Action: No keyword found
+2023-04-08,15:10:39,595,INFO,Startup complete
+2023-04-08,15:10:43,264,INFO,User said: run dashboard
+2023-04-08,15:10:43,306,INFO,Action: Opened dashboard for the user
+2023-04-08,15:10:43,306,ERROR,Action: Command not recognized
+2023-04-08,15:10:43,306,ERROR,Action: No keyword found
+2023-04-08,15:11:23,392,INFO,Startup complete
+2023-04-08,15:11:27,397,INFO,User said: run dashboard
+2023-04-08,15:11:27,439,INFO,Action: Opened dashboard for the user
+2023-04-08,15:11:27,439,ERROR,Action: Command not recognized
+2023-04-08,15:11:27,439,ERROR,Action: No keyword found
+2023-04-08,15:12:05,269,INFO,Startup complete
+2023-04-08,15:12:07,952,INFO,User said: run dashboard
+2023-04-08,15:12:07,993,INFO,Action: Opened dashboard for the user
+2023-04-08,15:12:07,993,ERROR,Action: Command not recognized
+2023-04-08,15:12:07,993,ERROR,Action: No keyword found
+2023-04-08,15:13:44,840,INFO,Startup complete
+2023-04-08,15:13:48,958,INFO,User said: run dashboard
+2023-04-08,15:13:49,000,INFO,Action: Opened dashboard for the user
+2023-04-08,15:13:49,000,ERROR,Action: Command not recognized
+2023-04-08,15:13:49,000,ERROR,Action: No keyword found
+2023-04-08,15:14:04,202,INFO,Startup complete
+2023-04-08,15:14:13,728,INFO,User said: run dashboard
+2023-04-08,15:14:13,770,INFO,Action: Opened dashboard for the user
+2023-04-08,15:14:13,770,ERROR,Action: Command not recognized
+2023-04-08,15:14:13,770,ERROR,Action: No keyword found
+2023-04-08,15:15:32,968,INFO,Startup complete
+2023-04-08,15:15:36,823,INFO,User said: run dashboard
+2023-04-08,15:15:36,866,INFO,Action: Opened dashboard for the user
+2023-04-08,15:15:36,866,ERROR,Action: Command not recognized
+2023-04-08,15:15:36,866,ERROR,Action: No keyword found
+2023-04-08,15:21:53,206,INFO,Startup complete
+2023-04-08,15:22:00,244,INFO,User said: run dashboard
+2023-04-08,15:22:00,299,INFO,Action: Opened dashboard for the user
+2023-04-08,15:22:00,300,ERROR,Action: Command not recognized
+2023-04-08,15:22:00,300,ERROR,Action: No keyword found
+2023-04-08,15:22:18,778,INFO,Startup complete
+2023-04-08,15:22:23,421,INFO,User said: run dashboard
+2023-04-08,15:22:23,471,INFO,Action: Opened dashboard for the user
+2023-04-08,15:22:23,471,ERROR,Action: Command not recognized
+2023-04-08,15:22:23,471,ERROR,Action: No keyword found
+2023-04-08,18:25:29,967,INFO,Startup complete
+2023-04-08,18:25:41,170,INFO,User said: weather provo
+2023-04-08,18:25:41,374,INFO,Action: Told the weather
+2023-04-08,18:25:41,375,ERROR,Action: Command not recognized
+2023-04-08,18:25:41,375,ERROR,Action: No keyword found
+2023-04-08,18:26:19,408,INFO,User said: search google apples
+2023-04-08,18:26:19,710,INFO,Action: Opening apples
+2023-04-08,18:26:19,711,ERROR,Action: Command not recognized
+2023-04-08,18:26:19,711,ERROR,Action: No keyword found
+2023-04-08,18:27:55,775,INFO,Startup complete
+2023-04-08,18:27:59,771,INFO,User said: weather provo
+2023-04-08,18:27:59,921,INFO,Action:
+2023-04-08,18:27:59,921,ERROR,Action: Command not recognized
+2023-04-08,18:27:59,921,ERROR,Action: No keyword found
+2023-04-08,18:28:19,631,INFO,User said: go to dallinstewart.com
+2023-04-08,18:28:19,839,INFO,Action: Opening dallinstewart.com
+2023-04-08,18:28:19,839,ERROR,Action: Command not recognized
+2023-04-08,18:28:19,839,ERROR,Action: No keyword found
+2023-04-08,18:28:50,249,INFO,User said: search google apples
+2023-04-08,18:29:37,898,INFO,Startup complete
+2023-04-08,18:29:56,691,INFO,User said: search google apples
+2023-04-08,18:29:56,692,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:29:56,692,ERROR,Action: Command not recognized
+2023-04-08,18:29:56,692,ERROR,Action: No keyword found
+2023-04-08,18:30:35,968,INFO,Startup complete
+2023-04-08,18:30:40,847,INFO,User said: search google for apples
+2023-04-08,18:30:49,691,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:30:53,711,ERROR,Action: Command not recognized
+2023-04-08,18:30:53,711,ERROR,Action: No keyword found
+2023-04-08,18:31:56,234,INFO,Startup complete
+2023-04-08,18:32:02,475,INFO,User said: search google for
+2023-04-08,18:32:02,476,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:32:02,476,ERROR,Action: Command not recognized
+2023-04-08,18:32:02,476,ERROR,Action: No keyword found
+2023-04-08,18:32:10,292,INFO,User said: search google for apples
+2023-04-08,18:32:17,332,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:32:19,395,ERROR,Action: Command not recognized
+2023-04-08,18:32:19,395,ERROR,Action: No keyword found
+2023-04-08,18:34:00,821,INFO,Startup complete
+2023-04-08,18:34:04,967,INFO,User said: google apples
+2023-04-08,18:34:04,967,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:34:04,967,ERROR,Action: Command not recognized
+2023-04-08,18:34:04,967,ERROR,Action: No keyword found
+2023-04-08,18:34:20,058,INFO,Startup complete
+2023-04-08,18:34:23,295,INFO,User said: google apples
+2023-04-08,18:34:34,963,INFO,Action: Searched google for apples
+2023-04-08,18:34:34,963,ERROR,Action: Command not recognized
+2023-04-08,18:34:34,963,ERROR,Action: No keyword found
+2023-04-08,18:38:43,806,INFO,Startup complete
+2023-04-08,18:38:47,628,INFO,User said: google apples
+2023-04-08,18:38:53,210,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:38:55,276,ERROR,Action: Command not recognized
+2023-04-08,18:38:55,276,ERROR,Action: No keyword found
+2023-04-08,18:39:22,928,INFO,Startup complete
+2023-04-08,18:39:26,718,INFO,User said: google apples
+2023-04-08,18:39:32,427,ERROR,"Action: Sorry sir, I couldn't find anything on that topic"
+2023-04-08,18:39:34,626,ERROR,Action: Command not recognized
+2023-04-08,18:39:34,627,ERROR,Action: No keyword found
+2023-04-08,18:40:08,107,INFO,Startup complete
+2023-04-08,18:40:10,933,INFO,User said: google apples
+2023-04-08,18:40:22,710,INFO,Action: Searched google for apples
+2023-04-08,18:40:22,710,ERROR,Action: Command not recognized
+2023-04-08,18:40:22,710,ERROR,Action: No keyword found
+2023-04-08,18:41:38,294,INFO,Startup complete
+2023-04-08,18:41:44,145,INFO,User said: google apples
+2023-04-08,18:42:14,478,INFO,Action: Searched google for apples
+2023-04-08,18:42:14,478,ERROR,Action: Command not recognized
+2023-04-08,18:42:14,478,ERROR,Action: No keyword found
+2023-04-08,18:42:14,478,INFO,User said: f
+2023-04-08,18:42:14,478,ERROR,Action: Command not recognized
+2023-04-08,18:42:14,478,ERROR,Action: No keyword found
+2023-04-08,18:48:02,347,INFO,Startup complete
+2023-04-08,18:48:07,324,INFO,User said: note
+2023-04-08,18:49:13,253,INFO,Startup complete
+2023-04-08,18:49:15,401,INFO,User said: note
+2023-04-08,18:49:38,715,INFO,Startup complete
+2023-04-08,18:49:43,393,INFO,User said: note
+2023-04-08,18:49:49,122,INFO,Action: Took a note
+2023-04-08,18:49:49,122,ERROR,Action: Command not recognized
+2023-04-08,18:49:49,122,ERROR,Action: No keyword found
+2023-04-08,18:49:56,995,INFO,User said: close notes
+2023-04-08,18:50:22,223,INFO,Startup complete
+2023-04-08,18:50:25,760,INFO,User said: close notes
+2023-04-08,18:50:25,851,INFO,Action: Closed notes
+2023-04-08,18:50:25,851,ERROR,Action: Command not recognized
+2023-04-08,18:50:25,851,ERROR,Action: No keyword found
+2023-04-08,18:50:50,586,INFO,User said: where is alaska
+2023-04-08,18:50:52,129,WARNING,"Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(""HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"")': /search?q=+alaska&format=json&limit=1&addressdetails=1"
+2023-04-08,18:50:53,246,WARNING,"Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(""HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"")': /search?q=+alaska&format=json&limit=1&addressdetails=1"
+2023-04-08,18:56:07,209,INFO,Startup complete
+2023-04-08,18:56:12,994,INFO,User said: what is 2+2
+2023-04-08,18:56:14,118,INFO,Action: Answered what is 2+2
+2023-04-08,18:56:14,118,ERROR,Action: Command not recognized
+2023-04-08,18:56:14,118,ERROR,Action: No keyword found
+2023-04-08,18:56:24,798,INFO,User said: where is alaska
+2023-04-08,18:56:26,677,INFO,Requested http://ipinfo.io/json
+2023-04-08,18:56:27,694,INFO,Action: Found a location
+2023-04-08,18:56:27,694,ERROR,Action: Command not recognized
+2023-04-08,18:56:27,695,ERROR,Action: No keyword found
+2023-04-08,19:01:28,363,INFO,Startup complete
+2023-04-08,19:01:38,731,INFO,User said: take a screenshot
+2023-04-08,19:01:42,988,INFO,Action: Screenshot saved successfully
+2023-04-08,19:01:42,988,ERROR,Action: Command not recognized
+2023-04-08,19:01:42,988,ERROR,Action: No keyword found
+2023-04-08,19:02:13,759,INFO,User said: show me the screenshot
+2023-04-08,19:02:22,114,INFO,User said: power down
+2023-04-08,19:02:22,114,INFO,Action: Powered down
+2023-04-08,19:03:36,862,INFO,Startup complete
+2023-04-08,19:03:41,471,INFO,User said: show me the screenshot
+2023-04-08,19:05:25,353,INFO,Startup complete
+2023-04-08,19:05:28,893,INFO,User said: show image test1
+2023-04-08,19:05:28,893,ERROR,Action: Tried to show a screenshot that doesn't exist
+2023-04-08,19:05:28,893,ERROR,Action: Command not recognized
+2023-04-08,19:05:28,893,ERROR,Action: No keyword found
+2023-04-08,19:06:15,590,INFO,User said: power down
+2023-04-08,19:06:15,590,INFO,Action: Powered down
+2023-04-08,19:06:19,555,INFO,Startup complete
+2023-04-08,19:06:25,180,INFO,User said: show image test1
+2023-04-08,19:06:30,990,INFO,Action: Showed a screenshot
+2023-04-08,19:06:30,990,ERROR,Action: Command not recognized
+2023-04-08,19:06:30,990,ERROR,Action: No keyword found
+2023-04-08,19:08:26,952,INFO,User said: what can you do
+2023-04-08,19:08:26,953,INFO,Action: Told the user what the Lila can do
+2023-04-08,19:08:26,953,ERROR,Action: Command not recognized
+2023-04-08,19:08:26,953,ERROR,Action: No keyword found
+2023-04-08,19:08:37,663,INFO,User said: switch windows
+2023-04-08,19:08:38,105,INFO,Action: Switched window
+2023-04-08,19:08:38,105,ERROR,Action: Command not recognized
+2023-04-08,19:08:38,105,ERROR,Action: No keyword found
+2023-04-08,19:17:36,577,INFO,Startup complete
+2023-04-08,19:17:41,291,INFO,User said: lock computer
+2023-04-08,19:17:41,534,INFO,Action: Locked computer
+2023-04-08,19:17:41,534,ERROR,Action: Command not recognized - lock computer
+2023-04-08,19:17:41,534,ERROR,Action: No keyword found in command - lock computer
+2023-04-08,19:18:13,332,INFO,Startup complete
+2023-04-08,19:18:17,077,INFO,User said: lock computer
+2023-04-08,19:18:17,515,INFO,Action: Locked computer
+2023-04-08,19:18:17,515,ERROR,Action: Command not recognized - lock computer
+2023-04-08,19:18:17,515,ERROR,Action: No keyword found in command - lock computer
+2023-04-08,19:19:40,141,INFO,Startup complete
+2023-04-08,19:19:43,408,INFO,User said: lock computer
+2023-04-08,19:19:45,639,INFO,Action: Locked computer
+2023-04-08,19:19:45,639,ERROR,Action: Command not recognized - lock computer
+2023-04-08,19:19:45,639,ERROR,Action: No keyword found in command - lock computer
+2023-04-08,19:21:28,915,INFO,Startup complete
+2023-04-08,19:21:31,589,INFO,User said: lock computer
+2023-04-08,19:21:32,924,INFO,Action: Locked computer
+2023-04-08,19:21:32,924,ERROR,Action: Command not recognized - lock computer
+2023-04-08,19:21:32,924,ERROR,Action: No keyword found in command - lock computer
+2023-04-08,19:22:34,848,INFO,Startup complete
+2023-04-08,19:22:39,954,INFO,User said: lock computer
+2023-04-08,19:22:39,954,INFO,Action: Locked computer
+2023-04-08,19:22:39,954,ERROR,Action: Command not recognized - lock computer
+2023-04-08,19:22:39,954,ERROR,Action: No keyword found in command - lock computer
+2023-04-08,19:44:58,872,INFO,User said: power down
+2023-04-08,19:44:58,872,INFO,Action: Powered down
+2023-04-08,19:45:51,930,INFO,Startup complete
+2023-04-08,19:45:55,787,INFO,User said: voice mode
+2023-04-08,19:45:55,787,INFO,Action: Switched to voice mode
+2023-04-08,19:45:55,787,ERROR,Action: Command not recognized - voice mode
+2023-04-08,19:45:55,787,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,19:46:10,805,INFO,User said: lila push blog
+2023-04-08,19:46:28,649,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-08,19:46:28,649,ERROR,Action: Command not recognized - lila push blog
+2023-04-08,19:46:28,649,ERROR,Action: No keyword found in command - lila push blog
+2023-04-08,19:47:01,201,INFO,User said: lila silent mode
+2023-04-08,19:47:04,390,INFO,Action: Switched to silent mode
+2023-04-08,19:47:04,390,ERROR,Action: Command not recognized - lila silent mode
+2023-04-08,19:47:04,390,ERROR,Action: No keyword found in command - lila silent mode
+2023-04-08,19:47:09,722,INFO,User said: voice mode
+2023-04-08,19:47:09,722,INFO,Action: Switched to voice mode
+2023-04-08,19:47:09,722,ERROR,Action: Command not recognized - voice mode
+2023-04-08,19:47:09,722,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,19:47:15,121,INFO,User said: hi lila
+2023-04-08,19:47:15,121,ERROR,Action: Command not recognized - hi lila
+2023-04-08,19:47:15,122,ERROR,Action: No keyword found in command - hi lila
+2023-04-08,19:47:38,868,INFO,User said: lila are you up
+2023-04-08,19:47:40,660,INFO,Action: Greeted the user
+2023-04-08,19:47:40,660,ERROR,Action: Command not recognized - lila are you up
+2023-04-08,19:47:40,660,ERROR,Action: No keyword found in command - lila are you up
+2023-04-08,19:48:07,895,INFO,User said: lila silent mode
+2023-04-08,19:48:11,064,INFO,Action: Switched to silent mode
+2023-04-08,19:48:11,064,ERROR,Action: Command not recognized - lila silent mode
+2023-04-08,19:48:11,064,ERROR,Action: No keyword found in command - lila silent mode
+2023-04-08,19:51:10,448,INFO,User said: push blog
+2023-04-08,19:53:01,339,INFO,Startup complete
+2023-04-08,19:53:09,151,INFO,User said: push blog
+2023-04-08,19:53:40,718,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-08,19:53:40,718,ERROR,Action: Command not recognized - push blog
+2023-04-08,19:53:40,718,ERROR,Action: No keyword found in command - push blog
+2023-04-08,19:55:33,967,INFO,User said: power down
+2023-04-08,19:55:33,967,INFO,Action: Powered down
+2023-04-08,19:55:37,543,INFO,Startup complete
+2023-04-08,19:55:41,992,INFO,User said: push blog
+2023-04-08,19:55:44,545,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-08,19:55:44,545,ERROR,Action: Command not recognized - push blog
+2023-04-08,19:55:44,545,ERROR,Action: No keyword found in command - push blog
+2023-04-08,19:56:20,842,INFO,User said: power down
+2023-04-08,19:56:20,842,INFO,Action: Powered down
+2023-04-08,19:56:24,786,INFO,Startup complete
+2023-04-08,19:56:29,702,INFO,User said: push blog
+2023-04-08,19:56:32,498,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-08,19:56:32,500,ERROR,Action: Command not recognized - push blog
+2023-04-08,19:56:32,500,ERROR,Action: No keyword found in command - push blog
+2023-04-08,19:57:47,279,INFO,Startup complete
+2023-04-08,19:57:50,123,INFO,User said: push blog
+2023-04-08,19:57:53,132,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-08,19:57:53,132,ERROR,Action: Command not recognized - push blog
+2023-04-08,19:57:53,132,ERROR,Action: No keyword found in command - push blog
+2023-04-08,20:01:50,317,INFO,User said: voice mode
+2023-04-08,20:01:53,085,INFO,Action: Switched to voice mode
+2023-04-08,20:01:53,085,ERROR,Action: Command not recognized - voice mode
+2023-04-08,20:01:53,085,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,20:02:02,762,INFO,User said: lila what can you do
+2023-04-08,20:02:20,872,INFO,Action: Told the user what the Lila can do
+2023-04-08,20:02:20,872,ERROR,Action: Command not recognized - lila what can you do
+2023-04-08,20:02:20,872,ERROR,Action: No keyword found in command - lila what can you do
+2023-04-08,20:02:27,191,INFO,User said: layla search google for me
+2023-04-08,20:02:48,696,INFO,Action: Searched google for google for me
+2023-04-08,20:02:48,696,ERROR,Action: Command not recognized - layla search google for me
+2023-04-08,20:02:48,696,ERROR,Action: No keyword found in command - layla search google for me
+2023-04-08,20:03:37,756,INFO,User said: well tell me a joke
+2023-04-08,20:03:37,756,ERROR,Action: No keyword found in command - well tell me a joke
+2023-04-08,20:03:43,950,INFO,User said: lila tell me a joke
+2023-04-08,20:03:47,997,INFO,Action: Told a joke
+2023-04-08,20:03:47,997,ERROR,Action: Command not recognized - lila tell me a joke
+2023-04-08,20:03:47,997,ERROR,Action: No keyword found in command - lila tell me a joke
+2023-04-08,20:04:04,207,INFO,User said: layla tell me about python
+2023-04-08,20:04:26,095,INFO,"Action: Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming."
+2023-04-08,20:04:26,095,ERROR,Action: Command not recognized - layla tell me about python
+2023-04-08,20:04:26,096,ERROR,Action: No keyword found in command - layla tell me about python
+2023-04-08,20:04:33,610,INFO,User said: mama open slack
+2023-04-08,20:04:33,611,ERROR,Action: No keyword found in command - mama open slack
+2023-04-08,20:04:39,045,INFO,User said: lila open slack
+2023-04-08,20:04:41,638,INFO,Action: Opened slack for the user
+2023-04-08,20:04:41,638,ERROR,Action: Command not recognized - lila open slack
+2023-04-08,20:04:41,638,ERROR,Action: No keyword found in command - lila open slack
+2023-04-08,20:05:16,712,INFO,User said: switch to silent mode
+2023-04-08,20:05:16,712,ERROR,Action: No keyword found in command - switch to silent mode
+2023-04-08,20:05:39,518,INFO,User said: weather switch to silent mode
+2023-04-08,20:05:39,518,ERROR,Action: No keyword found in command - weather switch to silent mode
+2023-04-08,20:06:00,838,INFO,User said: lila switch to silent mode
+2023-04-08,20:06:00,839,INFO,Action: Switched to silent mode
+2023-04-08,20:06:00,839,ERROR,Action: Command not recognized - lila switch to silent mode
+2023-04-08,20:06:00,839,ERROR,Action: No keyword found in command - lila switch to silent mode
+2023-04-08,20:21:30,224,INFO,Startup complete
+2023-04-08,20:21:38,534,INFO,User said: piano
+2023-04-08,20:21:38,837,ERROR,Action: Command not recognized - piano
+2023-04-08,20:21:38,838,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:22:04,236,INFO,Startup complete
+2023-04-08,20:22:05,940,INFO,User said: piano
+2023-04-08,20:23:12,630,INFO,Startup complete
+2023-04-08,20:23:15,030,INFO,User said: piano
+2023-04-08,20:25:24,449,INFO,Startup complete
+2023-04-08,20:25:27,288,INFO,User said: piano
+2023-04-08,20:25:32,784,ERROR,Action: Command not recognized - piano
+2023-04-08,20:25:32,784,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:27:12,794,INFO,Startup complete
+2023-04-08,20:27:16,308,INFO,User said: pinao
+2023-04-08,20:27:16,309,ERROR,Action: Command not recognized - pinao
+2023-04-08,20:27:16,309,ERROR,Action: No keyword found in command - pinao
+2023-04-08,20:27:18,255,INFO,User said: piano
+2023-04-08,20:27:23,675,ERROR,Action: Command not recognized - piano
+2023-04-08,20:27:23,675,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:28:37,770,INFO,Startup complete
+2023-04-08,20:28:42,971,INFO,User said: piano
+2023-04-08,20:28:52,698,ERROR,Action: Command not recognized - piano
+2023-04-08,20:28:52,698,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:29:12,983,INFO,Startup complete
+2023-04-08,20:29:14,632,INFO,User said: piano
+2023-04-08,20:29:22,972,ERROR,Action: Command not recognized - piano
+2023-04-08,20:29:22,972,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:30:51,044,INFO,Startup complete
+2023-04-08,20:30:52,998,INFO,User said: piano
+2023-04-08,20:31:02,077,ERROR,Action: Command not recognized - piano
+2023-04-08,20:31:02,077,ERROR,Action: No keyword found in command - piano
+2023-04-08,20:48:52,676,INFO,User said: power down
+2023-04-08,20:48:52,678,INFO,Action: Powered down
+2023-04-08,21:42:09,824,INFO,Startup complete
+2023-04-08,21:42:12,152,INFO,User said: to-do
+2023-04-08,21:42:12,454,INFO,Action: Got the to-do list
+2023-04-08,21:42:12,454,ERROR,Action: Command not recognized - to-do
+2023-04-08,21:42:12,454,ERROR,Action: No keyword found in command - to-do
+2023-04-08,21:42:23,201,INFO,User said: voice mode
+2023-04-08,21:42:26,675,INFO,Action: Switched to voice mode
+2023-04-08,21:42:26,675,ERROR,Action: Command not recognized - voice mode
+2023-04-08,21:42:26,675,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,21:47:29,728,INFO,Startup complete
+2023-04-08,21:47:33,458,INFO,User said: to-do today
+2023-04-08,21:47:33,779,INFO,Action: Got the to-do list
+2023-04-08,21:47:33,779,ERROR,Action: Command not recognized - to-do today
+2023-04-08,21:47:33,779,ERROR,Action: No keyword found in command - to-do today
+2023-04-08,21:47:38,407,INFO,User said: to-do tmr
+2023-04-08,21:47:38,581,INFO,Action: Got the to-do list
+2023-04-08,21:47:38,581,ERROR,Action: Command not recognized - to-do tmr
+2023-04-08,21:47:38,581,ERROR,Action: No keyword found in command - to-do tmr
+2023-04-08,22:10:17,122,INFO,User said: voice mode
+2023-04-08,22:10:20,016,INFO,Action: Switched to voice mode
+2023-04-08,22:10:20,016,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:10:20,016,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:10:27,174,INFO,User said: hey lila what is on my to-do list
+2023-04-08,22:10:35,149,ERROR,Sorry sir I couldn't solve that problem. Please try again.Sorry sir I couldn't solve that problem. Please try again.
+2023-04-08,22:10:36,425,INFO,Action: Answered hey lila what is on my to-do list
+2023-04-08,22:10:36,425,ERROR,Action: Command not recognized - hey lila what is on my to-do list
+2023-04-08,22:10:36,425,ERROR,Action: No keyword found in command - hey lila what is on my to-do list
+2023-04-08,22:10:42,281,INFO,User said: hey lila to do list
+2023-04-08,22:10:42,281,ERROR,Action: Command not recognized - hey lila to do list
+2023-04-08,22:10:42,281,ERROR,Action: No keyword found in command - hey lila to do list
+2023-04-08,22:10:52,542,INFO,User said: hey lila to do list
+2023-04-08,22:10:52,542,ERROR,Action: Command not recognized - hey lila to do list
+2023-04-08,22:10:52,542,ERROR,Action: No keyword found in command - hey lila to do list
+2023-04-08,22:10:57,478,INFO,User said: oh my goodness
+2023-04-08,22:10:57,478,ERROR,Action: No keyword found in command - oh my goodness
+2023-04-08,22:10:59,924,INFO,User said: the power down
+2023-04-08,22:10:59,924,ERROR,Action: No keyword found in command - the power down
+2023-04-08,22:11:05,782,INFO,User said: well i left power down
+2023-04-08,22:11:05,782,ERROR,Action: No keyword found in command - well i left power down
+2023-04-08,22:11:11,581,INFO,User said: lila power down
+2023-04-08,22:11:14,694,INFO,Action: Powered down
+2023-04-08,22:12:28,520,INFO,Startup complete
+2023-04-08,22:12:33,368,INFO,User said: voice mode
+2023-04-08,22:12:36,836,INFO,Action: Switched to voice mode
+2023-04-08,22:12:36,836,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:12:36,836,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:12:41,736,INFO,User said: hey lila
+2023-04-08,22:12:43,462,INFO,Action: Greeted the user
+2023-04-08,22:12:43,462,ERROR,Action: Command not recognized - hey lila
+2023-04-08,22:12:43,462,ERROR,Action: No keyword found in command - hey lila
+2023-04-08,22:12:48,256,INFO,User said: hey lila to do list
+2023-04-08,22:13:00,380,INFO,Action: Got the to-do list
+2023-04-08,22:13:00,380,ERROR,Action: Command not recognized - hey lila to do list
+2023-04-08,22:13:00,380,ERROR,Action: No keyword found in command - hey lila to do list
+2023-04-08,22:13:30,638,INFO,User said: delilah to do list today
+2023-04-08,22:13:42,843,INFO,Action: Got the to-do list
+2023-04-08,22:13:42,843,ERROR,Action: Command not recognized - delilah to do list today
+2023-04-08,22:13:42,843,ERROR,Action: No keyword found in command - delilah to do list today
+2023-04-08,22:13:51,391,INFO,User said: hey lila keywords
+2023-04-08,22:14:37,909,ERROR,Action: Command not recognized - hey lila keywords
+2023-04-08,22:14:37,909,ERROR,Action: No keyword found in command - hey lila keywords
+2023-04-08,22:15:32,119,INFO,User said: lila power down
+2023-04-08,22:15:35,332,INFO,Action: Powered down
+2023-04-08,22:15:39,922,INFO,Startup complete
+2023-04-08,22:15:46,477,INFO,User said: voice mode
+2023-04-08,22:15:49,632,INFO,Action: Switched to voice mode
+2023-04-08,22:15:49,632,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:15:49,632,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:15:57,813,INFO,User said: hey lila to do list
+2023-04-08,22:16:23,166,INFO,Startup complete
+2023-04-08,22:16:26,815,INFO,User said: voice mode
+2023-04-08,22:16:29,919,INFO,Action: Switched to voice mode
+2023-04-08,22:16:29,919,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:16:29,919,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:16:36,805,INFO,User said: hey lila to do list today
+2023-04-08,22:18:00,481,INFO,Startup complete
+2023-04-08,22:18:02,443,INFO,User said: voice mode
+2023-04-08,22:18:05,298,INFO,Action: Switched to voice mode
+2023-04-08,22:18:05,298,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:18:05,298,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:18:13,810,INFO,User said: who is lila to do list today
+2023-04-08,22:18:21,320,ERROR,Sorry sir I couldn't solve that problem. Please try again.Sorry sir I couldn't solve that problem. Please try again.
+2023-04-08,22:18:22,593,INFO,Action: Answered who is lila to do list today
+2023-04-08,22:18:22,593,ERROR,Action: Command not recognized - who is lila to do list today
+2023-04-08,22:18:22,593,ERROR,Action: No keyword found in command - who is lila to do list today
+2023-04-08,22:18:28,055,INFO,User said: layla power down
+2023-04-08,22:18:30,772,INFO,Action: Powered down
+2023-04-08,22:19:21,424,INFO,Startup complete
+2023-04-08,22:19:24,849,INFO,User said: voice mode
+2023-04-08,22:19:27,930,INFO,Action: Switched to voice mode
+2023-04-08,22:19:27,930,ERROR,Action: Command not recognized - voice mode
+2023-04-08,22:19:27,930,ERROR,Action: No keyword found in command - voice mode
+2023-04-08,22:19:36,908,INFO,User said: hey lila to do list today
+2023-04-08,22:19:45,994,INFO,Action: All of your tasks are normal today. You have 1 recurring task. You need to Review flash cards.
+2023-04-08,22:19:45,994,ERROR,Action: Command not recognized - hey lila to do list today
+2023-04-08,22:19:45,994,ERROR,Action: No keyword found in command - hey lila to do list today
+2023-04-08,22:20:15,255,INFO,User said: lila tell me a joke
+2023-04-08,22:20:20,847,INFO,Action: Told a joke
+2023-04-08,22:20:20,847,ERROR,Action: Command not recognized - lila tell me a joke
+2023-04-08,22:20:20,847,ERROR,Action: No keyword found in command - lila tell me a joke
+2023-04-08,22:20:33,589,INFO,User said: my list start my day
+2023-04-08,22:20:33,589,ERROR,Action: No keyword found in command - my list start my day
+2023-04-08,22:20:39,387,INFO,User said: layla start my day
+2023-04-08,22:20:49,421,INFO,Action:
+2023-04-08,22:20:58,415,INFO,Action: Got the to-do list
+2023-04-08,22:20:58,415,ERROR,Action: Command not recognized - layla start my day
+2023-04-08,22:20:58,415,ERROR,Action: No keyword found in command - layla start my day
+2023-04-08,22:21:18,280,INFO,User said: lila power down
+2023-04-08,22:21:21,982,INFO,Action: Powered down
+2023-04-08,22:23:56,326,INFO,Startup complete
+2023-04-08,22:24:02,068,INFO,User said: lila start my day
+2023-04-08,22:24:21,794,INFO,Action:
+2023-04-08,22:24:30,771,INFO,Action: Got the to-do list
+2023-04-08,22:24:30,771,ERROR,Action: Command not recognized - lila start my day
+2023-04-08,22:24:30,771,ERROR,Action: No keyword found in command - lila start my day
+2023-04-08,22:24:38,580,INFO,User said: layla what can you do
+2023-04-08,22:25:00,433,INFO,Action: Told the user what the Lila can do
+2023-04-08,22:25:00,433,ERROR,Action: Command not recognized - layla what can you do
+2023-04-08,22:25:00,433,ERROR,Action: No keyword found in command - layla what can you do
+2023-04-08,22:25:13,485,INFO,User said: lila block computer
+2023-04-08,22:25:16,632,INFO,Action: Locked computer
+2023-04-08,22:25:16,632,ERROR,Action: Command not recognized - lila block computer
+2023-04-08,22:25:16,632,ERROR,Action: No keyword found in command - lila block computer
+2023-04-08,22:25:24,478,INFO,User said: hello lila
+2023-04-08,22:25:26,423,INFO,Action: Greeted the user
+2023-04-08,22:25:26,423,ERROR,Action: Command not recognized - hello lila
+2023-04-08,22:25:26,424,ERROR,Action: No keyword found in command - hello lila
+2023-04-08,22:25:33,489,INFO,User said: lila what time is it
+2023-04-08,22:25:35,745,INFO,Action: 10 25 p.m.
+2023-04-08,22:25:35,746,ERROR,Action: Command not recognized - lila what time is it
+2023-04-08,22:25:35,746,ERROR,Action: No keyword found in command - lila what time is it
+2023-04-08,22:25:50,149,INFO,User said: hi lila
+2023-04-08,22:25:52,645,INFO,Action: Greeted the user
+2023-04-08,22:25:52,645,ERROR,Action: Command not recognized - hi lila
+2023-04-08,22:25:52,645,ERROR,Action: No keyword found in command - hi lila
+2023-04-08,22:26:09,286,INFO,User said: layla tell me about brigham young university
+2023-04-08,22:26:37,366,INFO,"Action: Brigham Young (; June 1, 1801 – August 29, 1877) was an American religious leader and politician. He was the second president of the Church of Jesus Christ of Latter-day Saints (LDS Church), from 1847 until his death in 1877. During his time as church president, Young led his followers, the Mormon pioneers, west from Nauvoo, Illinois, to the Salt Lake Valley."
+2023-04-08,22:26:37,366,ERROR,Action: Command not recognized - layla tell me about brigham young university
+2023-04-08,22:26:37,366,ERROR,Action: No keyword found in command - layla tell me about brigham young university
+2023-04-08,22:27:04,390,INFO,User said: lila tell me about linear algebra
+2023-04-08,22:28:25,790,INFO,Action: Linear algebra is the branch of mathematics concerning linear equations such as:
+2023-04-08,22:28:25,800,ERROR,Action: Command not recognized - lila tell me about linear algebra
+2023-04-08,22:28:25,800,ERROR,Action: No keyword found in command - lila tell me about linear algebra
+2023-04-08,22:28:52,607,INFO,User said: my love what's under development
+2023-04-08,22:28:52,608,ERROR,Action: No keyword found in command - my love what's under development
+2023-04-08,22:29:12,668,INFO,User said: lila tell me about development
+2023-04-08,22:29:35,089,INFO,"Action: Me is the debut single album by South Korean singer and Blackpink member Jisoo. It was released on March 31, 2023 through YG Entertainment and Interscope Records. The single album was released with the lead single ""Flower."" It is a pop and trap record that blends dance, synth-pop, traditional Korean instruments, and Caribbean production."
+2023-04-08,22:29:35,089,ERROR,Action: Command not recognized - lila tell me about development
+2023-04-08,22:29:35,090,ERROR,Action: No keyword found in command - lila tell me about development
+2023-04-10,08:13:00,365,INFO,Startup complete
+2023-04-10,08:14:50,614,INFO,User said: lila start my day
+2023-04-10,08:15:11,601,INFO,Action:
+2023-04-10,08:15:29,051,INFO,Action: Got the to-do list
+2023-04-10,08:15:29,052,ERROR,Action: Command not recognized - lila start my day
+2023-04-10,08:15:29,052,ERROR,Action: No keyword found in command - lila start my day
+2023-04-10,08:17:04,820,INFO,User said: weather silent mode
+2023-04-10,08:17:22,186,INFO,Action:
+2023-04-10,08:17:22,186,ERROR,Action: Command not recognized - weather silent mode
+2023-04-10,08:17:22,187,ERROR,Action: No keyword found in command - weather silent mode
+2023-04-10,08:17:32,556,INFO,User said: lila silent mode
+2023-04-10,08:17:34,265,INFO,Action: Switched to silent mode
+2023-04-10,08:17:34,265,ERROR,Action: Command not recognized - lila silent mode
+2023-04-10,08:17:34,265,ERROR,Action: No keyword found in command - lila silent mode
+2023-04-10,08:17:38,648,INFO,User said: paino
+2023-04-10,08:17:38,648,ERROR,Action: Command not recognized - paino
+2023-04-10,08:17:38,648,ERROR,Action: No keyword found in command - paino
+2023-04-10,08:17:41,541,INFO,User said: piano
+2023-04-10,08:17:50,943,ERROR,Action: Command not recognized - piano
+2023-04-10,08:17:50,943,ERROR,Action: No keyword found in command - piano
+2023-04-10,08:18:42,577,INFO,User said: what can you do
+2023-04-10,08:18:42,577,INFO,Action: Told the user what the Lila can do
+2023-04-10,08:18:42,577,ERROR,Action: Command not recognized - what can you do
+2023-04-10,08:18:42,577,ERROR,Action: No keyword found in command - what can you do
+2023-04-10,08:19:01,699,INFO,User said: joke
+2023-04-10,08:19:01,700,INFO,Action: Told a joke
+2023-04-10,08:19:01,700,ERROR,Action: Command not recognized - joke
+2023-04-10,08:19:01,700,ERROR,Action: No keyword found in command - joke
+2023-04-10,08:19:22,018,INFO,User said: power down
+2023-04-10,08:19:22,018,INFO,Action: Powered down
+2023-04-10,13:55:32,897,INFO,Startup complete
+2023-04-10,13:55:38,643,INFO,User said: lila tell me the weather
+2023-04-10,13:55:44,386,INFO,"Action: Sorry Sir, I couldn't find the city in my database. Please try again"
+2023-04-10,13:55:44,386,ERROR,Action: Command not recognized - lila tell me the weather
+2023-04-10,13:55:44,386,ERROR,Action: No keyword found in command - lila tell me the weather
+2023-04-10,13:55:49,863,INFO,User said: lila open slack
+2023-04-10,13:55:52,178,INFO,Action: Opened slack for the user
+2023-04-10,13:55:52,178,ERROR,Action: Command not recognized - lila open slack
+2023-04-10,13:55:52,178,ERROR,Action: No keyword found in command - lila open slack
+2023-04-10,13:56:12,586,INFO,User said: i can show you once i finish the demo lila lock my computer
+2023-04-10,13:56:12,586,ERROR,Action: Command not recognized - i can show you once i finish the demo lila lock my computer
+2023-04-10,13:56:12,586,ERROR,Action: No keyword found in command - i can show you once i finish the demo lila lock my computer
+2023-04-10,13:56:22,375,INFO,User said: lila lock computer
+2023-04-10,13:56:25,263,INFO,Action: Locked computer
+2023-04-10,13:56:25,263,ERROR,Action: Command not recognized - lila lock computer
+2023-04-10,13:56:25,264,ERROR,Action: No keyword found in command - lila lock computer
+2023-04-10,13:56:38,826,INFO,User said: what can you do
+2023-04-10,13:56:38,826,ERROR,Action: No keyword found in command - what can you do
+2023-04-10,13:56:47,719,INFO,User said: somebody got confused
+2023-04-10,13:56:47,719,ERROR,Action: No keyword found in command - somebody got confused
+2023-04-10,13:56:53,207,INFO,User said: there's a lesson we don't
+2023-04-10,13:56:53,207,ERROR,Action: No keyword found in command - there's a lesson we don't
+2023-04-10,13:57:04,153,INFO,User said: problem too did they want
+2023-04-10,13:57:04,153,ERROR,Action: No keyword found in command - problem too did they want
+2023-04-10,13:57:09,904,INFO,User said: what can you do
+2023-04-10,13:57:09,905,ERROR,Action: No keyword found in command - what can you do
+2023-04-10,13:57:17,719,INFO,User said: lila what can you do
+2023-04-10,13:57:39,678,INFO,Action: Told the user what the Lila can do
+2023-04-10,13:57:39,678,ERROR,Action: Command not recognized - lila what can you do
+2023-04-10,13:57:39,678,ERROR,Action: No keyword found in command - lila what can you do
+2023-04-10,13:57:45,288,INFO,User said: lila power down
+2023-04-10,13:57:48,019,INFO,Action: Powered down
+2023-04-10,14:01:00,310,INFO,Startup complete
+2023-04-10,14:01:31,125,INFO,User said: push volume 1
+2023-04-10,14:01:31,126,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:01:31,126,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:01:31,126,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,14:02:23,503,INFO,Startup complete
+2023-04-10,14:02:27,729,INFO,User said: push volume 1
+2023-04-10,14:02:27,729,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:02:27,729,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:02:27,729,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,14:02:53,470,INFO,Startup complete
+2023-04-10,14:02:58,349,INFO,User said: push volume 1
+2023-04-10,14:02:58,351,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:02:58,351,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:02:58,351,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,14:03:32,643,INFO,Startup complete
+2023-04-10,14:03:38,973,INFO,User said: push volume 1
+2023-04-10,14:03:38,973,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:03:38,973,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:03:38,973,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,14:04:08,990,INFO,Startup complete
+2023-04-10,14:04:13,690,INFO,User said: push volume 1
+2023-04-10,14:04:13,690,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:04:13,690,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:04:13,690,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,14:04:22,451,INFO,Startup complete
+2023-04-10,14:04:26,692,INFO,User said: push volume 1
+2023-04-10,14:05:11,776,INFO,Startup complete
+2023-04-10,14:05:16,009,INFO,User said: push volume 1
+2023-04-10,14:05:52,165,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,14:05:52,165,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,14:05:52,165,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,18:27:20,261,INFO,Startup complete
+2023-04-10,18:27:24,830,INFO,User said: push volume 1
+2023-04-10,18:27:27,584,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,18:27:27,584,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,18:27:27,585,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,18:29:19,345,INFO,Startup complete
+2023-04-10,18:29:23,384,INFO,User said: push volume 1
+2023-04-10,18:29:26,240,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,18:29:26,240,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,18:29:26,240,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,18:29:57,428,INFO,Startup complete
+2023-04-10,18:30:02,023,INFO,User said: push volume 1
+2023-04-10,18:32:55,929,INFO,Startup complete
+2023-04-10,18:33:01,209,INFO,User said: push volume 1
+2023-04-10,18:33:03,191,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,18:33:03,191,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,18:33:03,191,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,18:34:30,818,INFO,Startup complete
+2023-04-10,18:34:38,181,INFO,User said: push volume 2
+2023-04-10,18:34:47,839,INFO,Startup complete
+2023-04-10,18:34:52,827,INFO,User said: push volume 1
+2023-04-10,18:34:54,840,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,18:34:54,840,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,18:34:54,840,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,19:52:06,491,INFO,Startup complete
+2023-04-10,19:52:09,867,INFO,User said: push volume 1
+2023-04-10,19:52:12,323,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,19:52:12,325,ERROR,Action: Command not recognized - push volume 1
+2023-04-10,19:52:12,325,ERROR,Action: No keyword found in command - push volume 1
+2023-04-10,20:01:35,529,INFO,Startup complete
+2023-04-10,20:01:39,574,INFO,User said: push volume 1
+2023-04-10,20:01:42,497,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,20:02:10,772,INFO,Startup complete
+2023-04-10,20:02:14,032,INFO,User said: push volume 1
+2023-04-10,20:02:16,076,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,20:04:14,087,INFO,Startup complete
+2023-04-10,20:04:18,178,INFO,User said: push volume 1
+2023-04-10,20:04:20,130,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,20:04:40,859,INFO,Startup complete
+2023-04-10,20:04:43,854,INFO,User said: push volume 1
+2023-04-10,20:04:45,481,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-10,20:06:18,183,INFO,Startup complete
+2023-04-10,20:06:21,908,INFO,User said: push volume 1
+2023-04-10,20:07:06,880,INFO,Startup complete
+2023-04-10,20:07:12,399,INFO,User said: push volume 1
+2023-04-10,20:07:36,561,INFO,Startup complete
+2023-04-10,20:07:39,161,INFO,User said: push volume 1
+2023-04-10,20:07:59,115,INFO,Startup complete
+2023-04-10,20:08:05,292,INFO,User said: push volume 1
+2023-04-10,20:11:09,090,INFO,Startup complete
+2023-04-10,20:11:13,089,INFO,User said: push volume 1
+2023-04-10,20:11:53,891,INFO,Startup complete
+2023-04-10,20:11:56,314,INFO,User said: push volume 2
+2023-04-10,20:12:46,450,INFO,Startup complete
+2023-04-10,20:12:49,187,INFO,User said: push volume 1
+2023-04-10,20:13:35,284,INFO,Startup complete
+2023-04-10,20:13:41,888,INFO,User said: push volume 1
+2023-04-10,20:13:52,726,INFO,Startup complete
+2023-04-10,20:13:57,298,INFO,User said: push voluem 2
+2023-04-10,20:14:19,430,INFO,Startup complete
+2023-04-10,20:14:26,326,INFO,User said: push volume 2
+2023-04-10,20:16:08,960,INFO,Startup complete
+2023-04-10,20:16:11,324,INFO,User said: push volume 1
+2023-04-10,20:16:33,007,INFO,Startup complete
+2023-04-10,20:16:35,724,INFO,User said: push volume 1
+2023-04-10,20:16:48,895,INFO,Startup complete
+2023-04-10,20:16:51,940,INFO,User said: push volume 1
+2023-04-10,20:19:01,532,INFO,Startup complete
+2023-04-10,20:19:05,469,INFO,User said: push volume 1
+2023-04-10,20:19:55,990,INFO,Startup complete
+2023-04-10,20:19:59,083,INFO,User said: push v
+2023-04-10,20:20:18,137,INFO,Startup complete
+2023-04-10,20:20:22,524,INFO,User said: push
+2023-04-10,20:20:42,653,INFO,Startup complete
+2023-04-10,20:20:43,901,INFO,User said: push
+2023-04-10,20:22:13,008,INFO,Startup complete
+2023-04-10,20:22:15,266,INFO,User said: push
+2023-04-10,20:23:59,691,INFO,Startup complete
+2023-04-10,20:24:01,262,INFO,User said: push v
+2023-04-10,20:24:44,817,INFO,Startup complete
+2023-04-10,20:24:49,303,INFO,User said: push
+2023-04-10,20:27:44,159,INFO,Startup complete
+2023-04-10,20:27:47,101,INFO,User said: push
+2023-04-10,20:28:45,022,INFO,Startup complete
+2023-04-10,20:28:47,950,INFO,User said: push
+2023-04-10,20:32:22,613,INFO,Startup complete
+2023-04-10,20:32:24,334,INFO,User said: push
+2023-04-10,20:32:50,839,INFO,Startup complete
+2023-04-10,20:32:51,992,INFO,User said: push
+2023-04-10,20:34:25,073,INFO,Startup complete
+2023-04-10,20:34:27,998,INFO,User said: push
+2023-04-10,20:36:18,712,INFO,Startup complete
+2023-04-10,20:36:19,659,INFO,User said:
+2023-04-10,20:36:21,241,INFO,User said: push
+2023-04-10,20:37:48,015,INFO,Startup complete
+2023-04-10,20:37:51,867,INFO,User said: push
+2023-04-11,07:55:48,709,INFO,Startup complete
+2023-04-11,07:55:53,008,INFO,User said: voice mode
+2023-04-11,07:55:56,326,INFO,Action: Switched to voice mode
+2023-04-11,07:55:56,326,ERROR,Action: No keyword found in command - voice mode
+2023-04-11,07:56:02,454,INFO,User said: lila start my day
+2023-04-11,07:56:22,457,INFO,Action:
+2023-04-11,07:56:40,724,INFO,Action: Got the to-do list
+2023-04-11,07:56:40,724,ERROR,Action: No keyword found in command - lila start my day
+2023-04-11,07:58:16,342,INFO,User said: lila what's the capital of rome
+2023-04-11,07:58:16,342,ERROR,Action: Command not recognized - lila what's the capital of rome
+2023-04-11,07:58:16,343,ERROR,Action: No keyword found in command - lila what's the capital of rome
+2023-04-11,07:58:45,702,INFO,User said: weather what is the capital of rome
+2023-04-11,07:58:52,100,INFO,"Action: Sorry Sir, I couldn't find the city in my database. Please try again"
+2023-04-11,07:58:52,100,ERROR,Action: No keyword found in command - weather what is the capital of rome
+2023-04-11,07:59:19,563,INFO,User said: leather what is the capital of italy
+2023-04-11,07:59:26,705,ERROR,Sorry sir I couldn't solve that problem. Please try again.Sorry sir I couldn't solve that problem. Please try again.
+2023-04-11,07:59:28,081,INFO,Action: Answered leather what is the capital of italy
+2023-04-11,07:59:28,081,ERROR,Action: No keyword found in command - leather what is the capital of italy
+2023-04-11,08:20:09,281,INFO,User said: lila what can you do
+2023-04-11,08:20:31,352,INFO,Action: Told the user what the Lila can do
+2023-04-11,08:20:31,352,ERROR,Action: No keyword found in command - lila what can you do
+2023-04-11,08:22:27,896,INFO,User said: lila add do laundry to my to do list today
+2023-04-11,08:22:43,615,INFO,"Action: All of your tasks are normal today. You have 6 recurring tasks. You need to: Brush teeth, Landslide Research, Vol 1 Reading, Vol 1 Quiz, CS Lab, and Look for summer housing,"
+2023-04-11,08:22:43,616,ERROR,Action: No keyword found in command - lila add do laundry to my to do list today
+2023-04-11,08:23:10,505,INFO,User said: lila
+2023-04-11,08:23:10,505,ERROR,Action: Command not recognized - lila
+2023-04-11,08:23:10,505,ERROR,Action: No keyword found in command - lila
+2023-04-11,08:23:36,708,INFO,User said: lila weather hello
+2023-04-11,08:23:42,656,INFO,"Action: Sorry Sir, I couldn't find the city in my database. Please try again"
+2023-04-11,08:23:42,656,ERROR,Action: No keyword found in command - lila weather hello
+2023-04-11,08:23:50,428,INFO,User said: lila weather provo
+2023-04-11,08:24:06,890,INFO,Action:
+2023-04-11,08:24:06,890,ERROR,Action: No keyword found in command - lila weather provo
+2023-04-11,08:24:13,980,INFO,User said: lila power down
+2023-04-11,08:24:16,968,INFO,Action: Powered down
+2023-04-12,07:21:23,769,INFO,Startup complete
+2023-04-12,07:22:13,751,INFO,Startup complete
+2023-04-12,07:22:20,544,INFO,User said: weather start my day
+2023-04-12,07:22:26,307,INFO,"Action: Sorry Sir, I couldn't find the city in my database. Please try again"
+2023-04-12,07:22:26,307,ERROR,Action: No keyword found in command - weather start my day
+2023-04-12,07:22:31,925,INFO,User said: lima start my day
+2023-04-12,07:22:52,123,INFO,Action:
+2023-04-12,07:23:10,959,INFO,Action: Got the to-do list
+2023-04-12,07:23:10,960,ERROR,Action: No keyword found in command - lima start my day
+2023-04-12,07:24:13,168,INFO,User said: well tell me about provo utah hello
+2023-04-12,07:24:13,168,ERROR,Action: No keyword found in command - well tell me about provo utah hello
+2023-04-12,07:24:21,503,INFO,User said: lila tell me about provo utah
+2023-04-12,07:24:51,645,INFO,"Action: John Ream Curtis (born May 10, 1960) is an American politician serving as the U.S. representative for Utah's 3rd congressional district since 2017. Before his election to Congress, Curtis, a Republican, served as mayor of Provo, Utah, from 2010 to 2017. On November 7, 2017, he won a special election to replace Jason Chaffetz in Congress after Chaffetz resigned."
+2023-04-12,07:24:51,645,ERROR,Action: No keyword found in command - lila tell me about provo utah
+2023-04-12,07:25:22,012,INFO,User said: layla google downstrewart.com
+2023-04-12,07:26:10,125,INFO,Action: Searched google for downstrewart.com
+2023-04-12,07:26:10,125,ERROR,Action: No keyword found in command - layla google downstrewart.com
+2023-04-12,07:26:19,663,INFO,User said: lila lock computer
+2023-04-12,07:26:23,028,INFO,Action: Locked computer
+2023-04-12,07:26:23,028,ERROR,Action: No keyword found in command - lila lock computer
+2023-04-12,07:26:32,156,INFO,User said: lila power down
+2023-04-12,07:26:35,127,INFO,Action: Powered down
+2023-04-13,13:43:25,886,INFO,Startup complete
+2023-04-13,13:43:39,549,INFO,User said: push volume 2
+2023-04-13,13:44:35,146,INFO,Startup complete
+2023-04-13,13:44:38,639,INFO,User said: push volume 2
+2023-04-13,13:46:33,364,INFO,Startup complete
+2023-04-13,13:46:36,636,INFO,User said: push volume 2
+2023-04-13,13:46:59,463,INFO,Startup complete
+2023-04-13,13:47:03,683,INFO,User said: push volume 2
+2023-04-13,15:25:18,557,INFO,Startup complete
+2023-04-13,15:25:39,051,INFO,User said: push volume 2
+2023-04-13,15:26:01,051,INFO,Startup complete
+2023-04-13,15:26:14,619,INFO,User said: push volume 1
+2023-04-13,15:26:22,865,INFO,Action: Pushed code for the user
+2023-04-13,15:30:16,251,INFO,Startup complete
+2023-04-13,15:30:25,144,INFO,User said: push volume 1
+2023-04-13,15:30:33,135,INFO,Action: Pushed code for the user
+2023-04-13,15:48:08,066,INFO,Startup complete
+2023-04-13,15:48:15,197,INFO,User said: push volume 1
+2023-04-13,15:48:23,481,INFO,Action: Pushed code for the user
+2023-04-13,15:53:30,868,INFO,Startup complete
+2023-04-13,15:53:35,710,INFO,User said: push volume 1
+2023-04-13,15:53:47,657,INFO,Action: Pushed code for the user
+2023-04-13,15:54:46,635,INFO,Startup complete
+2023-04-13,15:54:56,668,INFO,User said: push volume 1
+2023-04-13,16:01:40,961,INFO,Startup complete
+2023-04-13,16:01:47,136,INFO,User said: push volume 1
+2023-04-13,16:01:54,245,INFO,Action: Pushed code for the user
+2023-04-13,16:05:44,081,INFO,Startup complete
+2023-04-13,16:05:47,378,INFO,User said: push volume 2
+2023-04-13,16:05:51,216,ERROR,"Action: Sorry sir, I ran into an error with pushing code"
+2023-04-13,16:07:58,270,INFO,Startup complete
+2023-04-13,16:08:05,275,INFO,User said: push volume 2
+2023-04-13,16:08:27,969,INFO,Action: Code volume 2 pushed successfully
+2023-04-13,16:12:39,828,INFO,Startup complete
+2023-04-13,16:12:46,446,INFO,User said: weather
+2023-04-13,16:14:36,970,INFO,Startup complete
+2023-04-13,16:15:09,883,INFO,User said: weather
+2023-04-13,16:15:16,889,INFO,"Action: Sorry Sir, I couldn't find the city in my database. Please try again"
+2023-04-13,16:15:44,835,INFO,Startup complete
+2023-04-13,16:15:47,304,INFO,User said: weather
+2023-04-13,16:17:41,848,INFO,Startup complete
+2023-04-13,16:17:45,601,INFO,User said: weather
+2023-04-13,16:22:59,933,INFO,Startup complete
+2023-04-13,16:23:02,665,INFO,User said: weather
+2023-04-13,16:23:10,522,INFO,Action:
+2023-04-13,16:26:31,219,INFO,Startup complete
+2023-04-13,16:28:21,339,INFO,Startup complete
+2023-04-13,16:28:26,870,INFO,User said: voice mode
+2023-04-13,16:28:30,576,INFO,Action: Switched to voice mode
+2023-04-13,16:28:30,577,ERROR,Action: No keyword found in command - voice mode
+2023-04-13,16:28:39,216,INFO,User said: lila what can you do
+2023-04-13,16:29:01,267,INFO,Action: Told the user what the Lila can do
+2023-04-13,16:29:01,267,ERROR,Action: No keyword found in command - lila what can you do
+2023-04-13,16:29:23,760,INFO,User said: lila press to speak
+2023-04-13,16:29:27,233,INFO,Action: Switched to press to speak mode
+2023-04-13,16:29:27,234,ERROR,Action: No keyword found in command - lila press to speak
+2023-04-13,16:29:56,527,INFO,User said: lila what time is it
+2023-04-13,16:29:58,735,INFO,Action: 4 29 p.m.
+2023-04-13,16:29:58,736,ERROR,Action: No keyword found in command - lila what time is it
+2023-04-13,16:30:31,190,INFO,Startup complete
+2023-04-13,16:30:35,429,INFO,User said: press to speak
+2023-04-13,16:30:39,448,INFO,Action: Switched to press to speak mode
+2023-04-13,16:30:39,448,ERROR,Action: No keyword found in command - press to speak
+2023-04-13,16:30:54,175,INFO,User said: lila tell me the weather
+2023-04-13,16:31:01,752,INFO,Action:
+2023-04-13,16:31:01,752,ERROR,Action: No keyword found in command - lila tell me the weather
+2023-04-13,16:32:17,017,INFO,User said: lila earbud mode
+2023-04-13,16:32:17,017,ERROR,Action: Command not recognized - lila earbud mode
+2023-04-13,16:32:17,018,ERROR,Action: No keyword found in command - lila earbud mode
+2023-04-13,16:32:35,279,INFO,User said: lila earbud only
+2023-04-13,16:32:38,525,INFO,Action: Switched to earbud mode
+2023-04-13,16:32:42,767,INFO,User said: time
+2023-04-13,16:32:45,898,INFO,Action: 4 32 p.m.
+2023-04-13,16:32:53,690,INFO,User said: date
+2023-04-13,16:32:57,655,INFO,Action: Apr 13 2023
+2023-04-13,16:33:03,126,INFO,User said: silent mode
+2023-04-13,16:33:05,325,INFO,Action: Switched to silent mode
+2023-04-13,16:33:13,554,INFO,User said: power down
+2023-04-13,16:33:13,554,INFO,Action: Powered down
+2023-04-13,16:42:28,823,INFO,Startup complete
+2023-04-13,16:42:31,567,INFO,User said: power down
+2023-04-13,16:42:31,567,INFO,Action: Powered down
+2023-04-13,16:43:32,405,INFO,Startup complete
+2023-04-13,16:43:35,422,INFO,User said: power down
+2023-04-13,16:43:35,422,INFO,Action: Powered down
+2023-04-13,16:44:14,472,INFO,Startup complete
+2023-04-13,16:44:16,954,INFO,User said: power down
+2023-04-13,16:44:16,954,INFO,Action: Powered down
