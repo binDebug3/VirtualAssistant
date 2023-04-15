@@ -171,6 +171,13 @@ class MainThread:
                 elif "piano" in command:
                     youtube.play_background()
 
+                elif "news" in command:
+                    stories = news.parse_news(news.get_headlines())
+                    interface.output(stories, "info")
+
+                elif "check email" in command:
+                    labels = send_email.get_labels()
+                    interface.output(labels, "info")
 
                 # SEND EMAIL
                 elif "send an email" in command:
@@ -423,13 +430,13 @@ startExecution.run()
 # TODO make a chatbot feature
 
 # APIs
-# TODO get email working
 # TODO implement more APIs as below
 
 # other
 # TODO get run other programs working
 # TODO add more functionality to the to do list
 # TODO add more functionality to google calendar
+# TODO add more functionality to the email feature
 
 """
 - use more APIs

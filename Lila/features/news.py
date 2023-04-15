@@ -1,4 +1,45 @@
+from Lila import config
+
 import pyjokes
+import requests
+import json
+import logging
+
+
+def get_headlines():
+    url = (config.news_url + 'top-headlines?'
+           'country=us&'
+           'apiKey=' + config.news_api)
+    news = requests.get(url).text
+    news_dict = json.loads(news)
+    articles = news_dict['articles']
+
+    try:
+        return articles
+    except Exception as ex:
+        logging.error("Error in get_news function: " + str(ex))
+        return False
+
+
+def parse_news(articles):
+    output = ["Here are some of the stories you asked for: "]
+    transitions = ["First we have", "Here is another story.", "Next we we have", "Also,", "Finally,"]
+    try:
+        for i, article in enumerate(articles):
+            output.append(transitions[i])
+            output.append(article['title'] + ". ")
+            output.append("Here's a quick summary.")
+            output.append(article['description'])
+            if i >= 4:
+                break
+        return " ".join(output)
+    except Exception as ex:
+        logging.error("Error in parse_news function: " + str(ex))
+        return False
+
+
+def getNewsUrl():
+    return config.news_url
 
 
 def tell_joke():

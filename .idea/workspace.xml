@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8e18025-8894-4b56-9f94-f3ab91719309" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lila/features/google_calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/google_calendar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_text_temp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/news.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +145,16 @@
           <url>file://$PROJECT_DIR$/Lila/features/weather.py</url>
           <line>10</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lila/features/news.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lila/features/send_email.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

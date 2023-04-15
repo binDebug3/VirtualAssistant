@@ -30,8 +30,8 @@ def authenticate_google():
     # created automatically when the authorization flow completes for the first
     # time.
 
-    if os.path.exists(config.token):
-        with open(config.token, 'rb') as token:
+    if os.path.exists(config.cal_token):
+        with open(config.cal_token, 'rb') as token:
             creds = pickle.load(token)
 
     # If there are no (valid) credentials available, let the user log in.
@@ -40,11 +40,11 @@ def authenticate_google():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                config.credentials, SCOPES)
+                config.cal_credentials, SCOPES)
             creds = flow.run_local_server(port=0)
 
         # Save the credentials for the next run
-        with open(config.token, 'wb') as token:
+        with open(config.cal_token, 'wb') as token:
             pickle.dump(creds, token)
 
     return build('calendar', 'v3', credentials=creds)

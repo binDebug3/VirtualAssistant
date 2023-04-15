@@ -54,12 +54,13 @@ Lila has a lot of functionality built into her. She can:
 - Take screenshots
 - Interact with your to-do list using Todoist
 - Pushing and pulling code
+- Interacting with your calendar using Google Calendar
+- Checking the news
+- Interacting with your email using Gmail
+
 
 Future functionality will include:
-- Interacting with your calendar using Google Calendar
-- Interacting with your email using Gmail
 - Running other custom programs
-- Report on the news
 - Engage in conversation
 
 
