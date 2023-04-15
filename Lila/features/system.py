@@ -2,6 +2,11 @@ import psutil
 import math
 import pyautogui as gui
 import time
+import os
+import requests
+import ctypes
+import sys
+import utils
 
 
 def convert_size(size_bytes):
@@ -36,3 +41,16 @@ def switch_window():
     gui.press("tab")
     time.sleep(0.01)
     gui.keyUp("alt")
+
+def close_notes():
+    os.system("TASKKILL /F /IM notepad.exe")
+
+def get_ip():
+    return requests.get("https://api.ipify.org").text
+
+def lock_computer():
+    ctypes.windll.user32.LockWorkStation()
+
+def power_down():
+    utils.save_interactions()
+    sys.exit()

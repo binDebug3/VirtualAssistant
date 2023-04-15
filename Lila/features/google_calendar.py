@@ -61,8 +61,15 @@ def authenticate_google():
     return build('calendar', 'v3', credentials=creds)
 
 
-def get_events(day, service):
+def get_events(text):
     # dallin customize this so it ignores my college classes
+
+    service = authenticate_google()
+    day = get_date(text)
+
+    if day is None or day:
+        return None
+
     # Call the Calendar API
     date = datetime.datetime.combine(day, datetime.datetime.min.time())
     end_date = datetime.datetime.combine(day, datetime.datetime.max.time())

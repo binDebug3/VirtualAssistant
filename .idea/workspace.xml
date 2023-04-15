@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8e18025-8894-4b56-9f94-f3ab91719309" name="Changes" comment="" />
+    <list default="true" id="f8e18025-8894-4b56-9f94-f3ab91719309" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Lila/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/google_calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/google_calendar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/launch_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/launch_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/location.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/news.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/wikipedia_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/wikipedia_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lila/features/youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lila/features/youtube.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lila_images/test1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lila_notes/2023-04-08 18-49-49.118412-note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +109,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -100,11 +127,6 @@
           <url>file://$PROJECT_DIR$/Lila/features/todo_list.py</url>
           <line>26</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>212</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Lila/features/weather.py</url>

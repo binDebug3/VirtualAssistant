@@ -3,6 +3,23 @@ import requests
 from geopy.geocoders import Nominatim
 from geopy.distance import great_circle
 import geocoder
+import time
+
+
+def parse_input(command):
+    place = command.split("where is", 1)[1]
+    current, target, distance = location(place)
+    city = target.get("city", " ")
+    state = target.get("state", " ")
+    country = target.get("country", " ")
+    time.sleep(1)
+
+    if city:
+        return f"{place} is in {city}, {state}, {country}. " \
+                 f"It is {distance} miles away from {current}"
+    else:
+        return f"{place} is in {state}, {country}. It is {distance} miles away from {current}"
+
 
 def location(place):
     webbrowser.open("https://www.google.com/maps/place/" + place + "")

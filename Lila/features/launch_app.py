@@ -4,6 +4,17 @@ import os
 from Lila import config
 
 
+def get_path(interest, select_dict):
+    for key in config.dict_app.keys():
+        if key in interest:
+            app = key
+            break
+    if select_dict == "app":
+        return config.dict_app[app]
+    elif select_dict == "program":
+        return config.dict_app[app]
+
+
 def launch_app(path):
     try:
         # subprocess.run([path])
