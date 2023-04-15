@@ -1,9 +1,10 @@
+import time
 import webbrowser
 import requests
+
 from geopy.geocoders import Nominatim
 from geopy.distance import great_circle
 import geocoder
-import time
 
 
 def parse_input(command):

@@ -1,11 +1,11 @@
-import psutil
 import math
-import pyautogui as gui
 import time
-import os
-import requests
-import ctypes
 import sys
+import ctypes
+import psutil
+import requests
+import pyautogui as gui
+
 import utils
 
 
@@ -42,8 +42,6 @@ def switch_window():
     time.sleep(0.01)
     gui.keyUp("alt")
 
-def close_notes():
-    os.system("TASKKILL /F /IM notepad.exe")
 
 def get_ip():
     return requests.get("https://api.ipify.org").text

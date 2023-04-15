@@ -1,6 +1,8 @@
+from Lila import config, interface
+
 import wikipedia
 import wolframalpha
-from Lila import config, interface
+
 
 def tell_me_about(topic):
     try:
@@ -8,6 +10,7 @@ def tell_me_about(topic):
     except Exception as ex:
         print(ex)
         return False
+
 
 def compute_math(question):
     try:

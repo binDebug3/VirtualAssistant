@@ -1,10 +1,12 @@
-import subprocess
-import datetime
-import os
 from Lila import config
-import pyautogui as gui
+
+import os
 import time
+import datetime
+import subprocess
+import pyautogui as gui
 from PIL import Image
+
 
 def note(text):
     date = datetime.datetime.now()
@@ -15,6 +17,9 @@ def note(text):
 
     notepad = "notepad.exe"
     subprocess.Popen([notepad, file_path])
+
+def close_notes():
+    os.system("TASKKILL /F /IM notepad.exe")
 
 
 def take_screenshot(title):

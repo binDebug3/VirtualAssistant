@@ -1,4 +1,4 @@
-from Lila import config, interface
+from Lila import config, interface, toy
 from Lila.features import date_time, launch_app, open_website, weather, send_email, google_calendar, google_search, \
     note, location, wikipedia_search, system, todo_list, youtube, news
 
@@ -20,7 +20,7 @@ class MainThread:
         super(MainThread, self).__init__()
 
     def run(self):
-        # Set up the logging configuration
+        # Set up the log ging configuration
         logging.basicConfig(filename=config.log, level=logging.INFO,
                             format='%(asctime)s & %(levelname)s & %(message)s')
 
@@ -36,12 +36,12 @@ class MainThread:
                 # TELL THE DATE
                 if "date" in command or "day is" in command:
                     date = date_time.date()
-                    interface.output(date, "info", msg="Action: ")
+                    interface.output(date, "info")
 
                 # TELL THE TIME
                 elif "time" in command:
                     local_time = date_time.time()
-                    interface.output(local_time, "info", msg="Action: ")
+                    interface.output(local_time, "info")
 
                 # OPEN APPLICATION
                 elif "launch" in command or "open" in command:
@@ -51,22 +51,22 @@ class MainThread:
 
                         if path is None:
                             interface.output("Sorry sir, I don't know that application: " + app,
-                                             "error", msg="Action: ")
+                                             "error")
                         else:
                             interface.speak(f"Launching {app} for you sir")
                             success = launch_app.launch_app(path)
 
                             if success:
-                                logging.info("Action: Opened " + app + " for the user")
+                                interface.output("Action: Opened " + app + " for the user", "info")
                             else:
                                 raise Exception("Failed to open application")
 
                     except Exception as ex:
                         interface.output("Sorry sir, I ran into an error with that application: " + app,
-                                         "error", msg="Action: ")
+                                         "error")
                         print(ex)
 
-
+                # RUN ANOTHER PROGRAM
                 elif "run" in command:
                     project = "Not found"
                     try:
@@ -74,19 +74,19 @@ class MainThread:
 
                         if path is None:
                             interface.output("Sorry sir, I don't know that program: " + project,
-                                             "error", msg="Action: ")
+                                             "error")
                         else:
                             interface.speak(f"Launching {project} for you sir")
                             success = launch_app.run_program(path[0], path[1])
 
                             if success:
-                                logging.info("Action: Opened " + project + " for the user")
+                                interface.output("Action: Opened " + project + " for the user", "info")
                             else:
                                 raise Exception("Failed to open application")
 
                     except Exception as ex:
                         interface.output("Sorry sir, I ran into an error with that program: " + project,
-                                         "error", msg="Action: ")
+                                         "error")
                         print(ex)
 
                 # PUSH CODE
@@ -99,7 +99,7 @@ class MainThread:
                             directory = interest
 
                         # ask for a commit message
-                        if config.INTERACTION in ["silent", "earbud"]:
+                        if config.INTERACTION in ["silent", "earbud", "terminal"]:
                             commit_message = input("Commit message: ")
                         else:
                             interface.speak("What is the commit message?")
@@ -109,12 +109,12 @@ class MainThread:
                         success = launch_app.push_code(directory, commit_message)
 
                         if success:
-                            interface.output(f"Code for {directory} pushed successfully", "info", msg="Action: ")
+                            interface.output(f"Code for {directory} pushed successfully", "info")
                         else:
                             raise Exception("Failed to push code")
 
                     except Exception as ex:
-                        interface.output("Sorry sir, I ran into an error with pushing code", "error", msg="Action: ")
+                        interface.output("Sorry sir, I ran into an error with pushing code", "error")
                         print(ex)
 
                 # SAY GREETING
@@ -127,31 +127,28 @@ class MainThread:
                     open_result = open_website.website_opener(interest)
 
                     if open_result is None:
-                        interface.output("Sorry sir, I couldn't open that website: " + interest,
-                                         "error", msg="Action: ")
+                        interface.output("Sorry sir, I couldn't open that website: " + interest, "error")
                     else:
-                        interface.output("Opening " + interest, "info", msg="Action: ")
+                        interface.output("Opening " + interest, "info")
 
                 # TELL THE WEATHER
                 elif "weather" in command:
-                    city = interest
-                    weather_result = weather.fetch_weather(city=city)
-                    interface.output(weather_result, "info", msg="Action: ")
+                    weather_result = weather.fetch_weather(city=interest)
+                    interface.output(weather_result, "info")
 
                 # SEARCH WIKIPEDIA
                 elif "tell me about" in command:
-                    topic = interest
                     error_string = "Sorry sir, I couldn't find anything on that topic"
 
-                    if topic:
-                        wiki_result = wikipedia_search.tell_me_about(topic)
+                    if interest:
+                        wiki_result = wikipedia_search.tell_me_about(interest)
 
                         if wiki_result:
-                            interface.output(wiki_result, "info", msg="Action: ")
+                            interface.output(wiki_result, "info")
                         else:
-                            interface.output(error_string, "error", msg="Action: ")
+                            interface.output(error_string, "error")
                     else:
-                        interface.output(error_string, "error", msg="Action: ")
+                        interface.output(error_string, "error")
 
                 # SEARCH GOOGLE
                 elif "google" in command:
@@ -160,14 +157,15 @@ class MainThread:
                         logging.info("Action: Searched google for " + interest)
 
                     except Exception as ex:
-                        interface.output("Sorry sir, I couldn't find anything on that topic", "error", msg="Action: ")
+                        interface.output("Sorry sir, I couldn't find anything on that topic", "error")
                         print(ex)
 
                 # SEARCH YOUTUBE
                 elif "youtube" in command:
-                    interface.output(f"Okay sir, playing {interest} on youtube", "info", msg="Action: ")
+                    interface.output(f"Okay sir, playing {interest} on youtube", "info")
                     youtube.play_video(interest)
 
+                # PLAY MUSIC
                 elif "piano" in command:
                     youtube.play_background()
 
@@ -190,20 +188,20 @@ class MainThread:
                             success = send_email.mail(config.email, config.email_password, rec_email, msg)
 
                             if success:
-                                interface.output("Email sent successfully", "info", msg="Action: ")
+                                interface.output("Email sent successfully", "info")
                             else:
                                 raise Exception("Email not sent")
 
                         else:
-                            interface.output("Sorry sir, I couldn't find that email address", "error", msg="Action: ")
+                            interface.output("Sorry sir, I couldn't find that email address", "error")
 
                     except Exception:
-                        interface.output("Sorry sir, I couldn't send that email", "error", msg="Action: ")
+                        interface.output("Sorry sir, I couldn't send that email", "error")
 
                 # DO MATH
                 elif "calculate" in command:
                     answer = wikipedia_search.compute_math(command)
-                    interface.output(answer, "info", msg="Action: ")
+                    interface.output(answer, "info")
 
                 # USE GOOGLE CALENDAR
                 elif "calendar" in command:
@@ -211,67 +209,64 @@ class MainThread:
                     logging.info("Action: Used the calendar")
 
                 elif "close notes" in command:
-                    interface.output("Okay sir, closing notes", "info", msg="Action: ")
-                    system.close_notes()
+                    interface.output("Okay sir, closing notes", "info")
+                    note.close_notes()
 
                 # TAKE NOTES
                 elif "note" in command or "write" in command:
                     interface.speak("What should I write down?")
-                    if config.INTERACTION in ["silent", "earbud"]:
+                    if config.INTERACTION in ["silent", "earbud", "terminal"]:
                         scribble = input("Write here: ")
                     else:
                         scribble = interface.mic_input()
 
                     note.note(scribble)
-                    interface.output("I've made a note of that sir", "info", msg="Action: ")
+                    interface.output("I've made a note of that sir", "info")
 
                 # GET TO DO LIST
-                elif "to-do" in command or "to do" in command:
+                elif "to-do" in command or "to do" in command or "todo" in command:
                     interface.speak("Here is your to-do list")
-                    quehaceres = todo_list.get_todo(interest.split()[-1])
-                    interface.output(quehaceres, "info", msg="Action: ")
+                    interface.output(todo_list.get_todo(interest.split()[-1]), "info")
 
                 # TELL JOKES
                 elif "joke" in command:
                     joke = news.tell_joke()
-                    interface.output(joke, "info", msg="Action: ")
+                    interface.output(joke, "info")
 
                 # SHOW SYSTEM INFO
                 elif "system info" in command:
                     info = system.system_stats()
-                    interface.output(info, "info", msg="Action: ")
+                    interface.output(info, "info")
 
                 # USE MAPS
                 elif "where is" in command:
                     try:
                         result = location.parse_input(command)
-                        interface.output(result, "info", msg="Action: ")
+                        interface.output(result, "info")
 
                     except Exception as ex:
-                        interface.output("Sorry sir, I couldn't find that location", "error", msg="Action: ")
+                        interface.output("Sorry sir, I couldn't find that location", "error")
                         print(ex)
 
                 # GET IP ADDRESS
                 elif "ip address" in command:
                     ip = system.get_ip()
-                    interface.output(f"Your IP address is {ip}", "info", msg="Action: ")
+                    interface.output(f"Your IP address is {ip}", "info")
 
                 # CHANGE TABS
                 elif "switch window" in command:
-                    interface.speak("Okay sir, switching windows")
+                    interface.output("Okay sir, switching windows", "info")
                     system.switch_window()
-                    logging.info("Action: Switched window")
 
                 # LOCK COMPUTER
                 elif "lock computer" in command:
-                    interface.speak("Okay sir, locking computer")
+                    interface.output("Okay sir, locking computer", "info")
                     system.lock_computer()
-                    logging.info("Action: Locked computer")
 
                 # TAKE SCREENSHOTS
                 elif "screenshot" in command:
                     interface.speak("What should I call this screenshot sir?")
-                    if config.INTERACTION in ["silent", "earbud"]:
+                    if config.INTERACTION in ["silent", "earbud", "terminal"]:
                         title = input("Title: ")
                     else:
                         title = interface.mic_input()
@@ -279,30 +274,30 @@ class MainThread:
                     interface.speak("Okay sir, taking screenshot")
                     note.take_screenshot(title)
 
-                    interface.output("Screenshot saved successfully", "info", msg="Action: ")
+                    interface.output("Screenshot saved successfully", "info")
 
+                # OPEN IMAGE
                 elif "image" in command:
 
                     try:
                         note.show_image(interest)
-                        interface.output("Okay sir, showing screenshot", "info", msg="Action: ")
+                        interface.output("Okay sir, showing screenshot", "info")
 
                     except IOError as ex:
-                        interface.output("Sorry sir, I couldn't find that screenshot", "error", msg="Action: ")
+                        interface.output("Sorry sir, I couldn't find that screenshot", "error")
                         print(ex)
 
                 # ANSWER QUESTIONS
                 elif "what is" in command or "who is" in command:
                     answer = wikipedia_search.compute_math(command)
-                    interface.speak(answer)
-                    logging.info("Action: Answered " + command)
+                    interface.output(answer, "info")
 
                 # START OF DAY
                 elif "start my day" in command:
                     interface.speak("Okay sir, let's get our day started.")
 
                     # describe the weather
-                    interface.output(weather.fetch_weather(city="Provo"), "info", msg="Action: ")
+                    interface.output(weather.fetch_weather(city="Provo"), "info")
 
                     # recite today's to do list
                     interface.speak("Here is your to-do list")
@@ -316,7 +311,7 @@ class MainThread:
 
 
 
-
+                # DESCRIBE CAPABILITIES
                 elif "what can you do" in command:
                     interface.speak("Right now, I can: "
                                     "tell the date, "
@@ -338,6 +333,7 @@ class MainThread:
                                     )
                     logging.info("Action: Told the user what the Lila can do")
 
+                # DESCRIBE UPCOMING FEATURES
                 elif "development" in command:
                     interface.speak("Right now, the features still in development are: "
                                     "sending emails, "
@@ -347,6 +343,7 @@ class MainThread:
                                     "and of course, incorporating chat gpt"
                                     )
 
+                # REPORT KEYWORDS
                 elif "keyword" in command:
                     interface.speak("Here is what I listen for in your commands: "
                                     "Lila will tell me to listen for a command, "
@@ -386,27 +383,31 @@ class MainThread:
                 elif "silent mode" in command:
                     interface.speak("Okay")
                     config.INTERACTION = "silent"
-                    interface.output("Okay sir, switching to silent mode", "info", msg="Action: ")
+                    interface.output("Okay sir, switching to silent mode", "info")
 
                 elif "voice mode" in command:
                     config.INTERACTION = "voice"
-                    interface.output("Okay sir, switching to voice mode", "info", msg="Action: ")
+                    interface.output("Okay sir, switching to voice mode", "info")
 
                 elif "earbud mode" in command:
                     config.INTERACTION = "earbud"
-                    interface.output("Okay sir, switching to earbud mode", "info", msg="Action: ")
+                    interface.output("Okay sir, switching to earbud mode", "info")
 
                 elif "press mode" in command:
                     config.INTERACTION = "press"
-                    interface.output("Okay sir, switching to press to interface.speak mode", "info", msg="Action: ")
+                    interface.output("Okay sir, switching to press to speak mode", "info")
+
+                elif "terminal mode" in command:
+                    config.INTERACTION = "terminal"
+                    interface.output("Okay sir, switching to terminal only mode", "info")
 
                 elif "power down" in command:
-                    interface.output("Okay sir, powering down", "info", msg="Action: ")
+                    interface.output("Okay sir, powering down", "info")
                     system.power_down()
 
                 else:
                     logging.error("Action: Command not recognized - " + command)
-            if config.INTERACTION not in ["silent", "earbud"]:
+            if config.INTERACTION not in ["silent", "earbud", "terminal"]:
                 logging.error("Action: No keyword found in command - " + command)
 
 
@@ -416,13 +417,25 @@ startExecution.run()
 # nlp
 # TODO work on nlp part
 # TODO make more nlp data
-
-# debugging
-# TODO get other programs working
+# TODO process gmails for me
+# TODO make a chatbot feature
 
 # APIs
 # TODO get google calendar working
 # TODO get email working
+# TODO implement more APIs as below
+# TODO look for AI APIs like chat gpt
 
 # other
+# TODO get run other programs working
 # TODO add a input box for silent and earbud mode
+# TODO get a gui working
+
+"""
+- use more APIs
+    - text analysis
+    - scrapeninja or scrapestack
+    - SEO API
+    - XKCD API
+    - IBM watson text to speech
+"""

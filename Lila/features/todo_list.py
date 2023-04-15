@@ -1,6 +1,8 @@
-from todoist_api_python.api import TodoistAPI
 from Lila import config
+
 import datetime
+
+from todoist_api_python.api import TodoistAPI
 
 
 api = TodoistAPI(config.todoist_api)

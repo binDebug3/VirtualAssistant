@@ -1,11 +1,12 @@
 import speech_recognition as sr
 import pyttsx3
+
 import logging
 import datetime
 import random
 
 from Lila import config
-from Lila.features import date_time
+from Lila.features import date_time, gui
 
 
 engine = pyttsx3.init('sapi5')
@@ -53,29 +54,42 @@ def tts(text):
         print("Error in tts function")
         print(ex)
         return False
-    
+
+
 # choose output style
 def speak(text):
-    if config.INTERACTION == "silent":
+    if config.INTERACTION == "silent" or config.INTERACTION == "terminal":
         print("Reply:", text)
     else:
         tts(text)
 
 # choose output style
-def output(text, level, msg=None):
-    if config.INTERACTION == "silent":
+def output(text, level, msg=""):
+    if config.INTERACTION == "silent" or config.INTERACTION == "terminal":
         print("Reply:", text)
     else:
         tts(text)
         print(text)
 
-    if msg is None:
-        msg = text
+    if msg != "":
+        msg = ". Note+ " + msg
+
     if level == "info":
-        logging.info(msg + text)
+        logging.info("Action: " + text + msg)
     else:
-        logging.error(msg + text)
-        
+        logging.error("Action: " + text + msg)
+
+
+def startup():
+    if not config.skip:
+        speak("Initializing Lila")
+        speak("Importing preferences and calibrating virtual environment")
+        speak("I've prepared a safety briefing for you to entirely ignore")
+        speak("I have indeed been uploaded sir")
+        speak("We're online and ready")
+
+    wish()
+
 # starting interaction 
 def wish():
     hour = int(datetime.datetime.now().hour)
@@ -89,43 +103,36 @@ def wish():
     speak(f"It is {date_time.time()}")
     speak("How can I help you today?")
     logging.info("Startup complete")
-    
-# get command
-def get_command():
-    if config.INTERACTION in ["silent", "earbud"]:
-        command = input("Command: ").lower()
-    elif config.INTERACTION == "press":
-        input("Press enter to speak: ")
-        print("One moment please...")
-        command = mic_input()
-    else:
-        command = mic_input()
-    logging.info("User said: " + command)
-    
-    return command, command.split(' ', 2)[-1]
+
+def greetings():
+    speak(random.choice(config.GREETINGS_RES))
+
 
 # choose to proceed
 def check_command(command):
     if not command:
         return False
 
-    if config.INTERACTION in ["silent", "earbud"]:
+    if config.INTERACTION in ["silent", "earbud", "terminal"]:
         proceed = True
     else:
         proceed = any([x in command for x in config.speech_impediment])
         
     return proceed
 
-def greetings():
-    speak(random.choice(config.GREETINGS_RES))
-    
-    
-def startup():
-    if not config.skip:
-        speak("Initializing Lila")
-        speak("Importing preferences and calibrating virtual environment")
-        speak("I've prepared a safety briefing for you to entirely ignore")
-        speak("I have indeed been uploaded sir")
-        speak("We're online and ready")
+# get command
+def get_command():
+    if config.INTERACTION in ["silent", "earbud"]:
+        command = gui.input_window("Command").lower()
+    elif config.INTERACTION == "press":
+        gui.input_window("Press enter to speak: ")
+        print("One moment please...")
+        command = mic_input()
+    elif config.INTERACTION == "terminal":
+        command = input("Command: ").lower()
+    else:
+        command = mic_input()
+    logging.info("User said: " + command)
 
-    wish()
+    return command, command.split(' ', 2)[-1]
+

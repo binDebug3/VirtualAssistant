@@ -1,7 +1,8 @@
-import subprocess
+from Lila import config
+
 import sys
 import os
-from Lila import config
+import subprocess
 
 
 def get_path(interest, select_dict):

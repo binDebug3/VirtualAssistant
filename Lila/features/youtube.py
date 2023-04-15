@@ -20,8 +20,10 @@ def search_video():
     url = "http://www.youtube.com/watch?v="+str(search_results)
     webbrowser.open_new(url)
 
+
 def play_video(video):
     pywhatkit.playonyt(video)
+
 
 def play_background():
     # randomly choose one of two urls
