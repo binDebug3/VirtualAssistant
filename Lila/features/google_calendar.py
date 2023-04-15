@@ -1,8 +1,6 @@
-# might need to check python version compatibility
 from __future__ import print_function
 import datetime
 import pytz
-import pyttsx3
 import pickle
 import os.path
 
@@ -10,7 +8,7 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-from Lila import config
+from Lila import config, interface
 
 
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -18,14 +16,6 @@ DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sun
 DAY_EXTENSIONS = ["rd", "th", "st", "nd"]
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
-
-def speak(text):
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[config.voice_index].id)
-    engine.say(text)
-    engine.runAndWait()
-    engine.setProperty('rate', 175)
 
 
 def authenticate_google():
@@ -40,7 +30,6 @@ def authenticate_google():
     # created automatically when the authorization flow completes for the first
     # time.
 
-    # dallin I don't really know what this does, hopefully it works
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
@@ -51,7 +40,7 @@ def authenticate_google():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                config.credentials, SCOPES)
             creds = flow.run_local_server(port=0)
 
         # Save the credentials for the next run
@@ -67,7 +56,7 @@ def get_events(text):
     service = authenticate_google()
     day = get_date(text)
 
-    if day is None or day:
+    if day is None or not day:
         return None
 
     # Call the Calendar API
@@ -85,9 +74,13 @@ def get_events(text):
     events = events_result.get('items', [])
 
     if not events:
-        speak('No upcoming events found.')
+        interface.speak('No upcoming events found.')
     else:
-        speak(f"You have {len(events)} events on this day.")
+        length = len(events)
+        if length == 1:
+            interface.speak(f"You have one event on {day}.")
+        else:
+            interface.speak(f"You have {length} events on {day}.")
 
         for event in events:
             start = event['start'].get('dateTime', event['start'].get('date'))
@@ -102,7 +95,7 @@ def get_events(text):
                 start_time = str(int(start_time.split(":")[0])-12) + start_time.split(":")[1]
                 start_time = start_time + "pm"
 
-            speak(event["summary"] + " at " + start_time)
+            interface.speak(event["summary"] + " at " + start_time)
 
 
 def get_date(text):

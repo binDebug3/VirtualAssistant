@@ -1,22 +1,11 @@
+from Lila import config, interface
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 import re
-import pyttsx3
 import time
-
-from Lila import config
-
-
-def speak(text):
-    # dallin make speak a global function so I don't have to keep re instantiating
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[config.voice_index].id)
-    engine.say(text)
-    engine.runAndWait()
-    engine.setProperty('rate', 175)
 
 
 def google_search(prompt):
@@ -29,8 +18,8 @@ def google_search(prompt):
         sub = reg_ex.group(1)
         url = url + 'r/' + sub
 
-    speak('Okay!')
-    speak("Searching for " + search_for)
+    interface.speak('Okay!')
+    interface.speak("Searching for " + search_for)
 
     driver = webdriver.Chrome(executable_path=config.chrome_path)
     driver.get('http://www.google.com', )

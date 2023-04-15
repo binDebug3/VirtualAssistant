@@ -27,6 +27,8 @@ def time():
             hour -= 12
             parsed[0] = str(hour)
             parsed.append("p.m.")
+        elif hour == 12:
+            parsed.append("p.m.")
         else:
             parsed.append("a.m.")
         if parsed[1][0] == "0":

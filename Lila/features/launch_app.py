@@ -84,6 +84,7 @@ def push_code(name, message=None, master=True):
 
     command += f" && git push origin {master}"
 
+    print("\n".join(command.split(" && ")))
     subprocess.run(command, shell=True)
 
     return True

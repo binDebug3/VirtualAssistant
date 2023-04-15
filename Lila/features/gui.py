@@ -38,7 +38,7 @@ def on_title_bar_press(event):
 
 # ---------------------------- UI SETUP ------------------------------- #
 
-def input_window(title):
+def input_window(title=None):
     # Create the main window
     global title_bar, root, input_box
     root = tk.Tk()
@@ -61,9 +61,10 @@ def input_window(title):
 
     # ---------------------------- INPUT BOX ------------------------------- #
 
-    # Create label above the input box
-    label = tk.Label(root, text=title, font=(font, font_size), bg=bg_color, fg=font_color)
-    label.pack(pady=1)
+    if title is not None:
+        # Create label above the input box
+        label = tk.Label(root, text=title, font=(font, font_size), bg=bg_color, fg=font_color)
+        label.pack(pady=1)
 
     # Create the input textbox
     input_box = tk.Entry(root, width=20, font=(font, 15), bg=input_color, fg=font_color)

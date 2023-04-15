@@ -65,6 +65,9 @@ def speak(text):
 
 # choose output style
 def output(text, level, msg=""):
+    if text is None:
+        return
+
     if config.INTERACTION == "silent" or config.INTERACTION == "terminal":
         print("Reply:", text)
     else:
@@ -113,10 +116,10 @@ def check_command(command):
     if not command:
         return False
 
-    if config.INTERACTION in ["silent", "earbud", "terminal"]:
-        proceed = True
-    else:
+    if config.INTERACTION == "voice":
         proceed = any([x in command for x in config.speech_impediment])
+    else:
+        proceed = True
         
     return proceed
 

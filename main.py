@@ -1,6 +1,6 @@
 from Lila import config, interface, toy
 from Lila.features import date_time, launch_app, open_website, weather, send_email, google_calendar, google_search, \
-    note, location, wikipedia_search, system, todo_list, youtube, news
+    note, location, wikipedia_search, system, todo_list, youtube, news, gui
 
 import logging
 
@@ -99,8 +99,10 @@ class MainThread:
                             directory = interest
 
                         # ask for a commit message
-                        if config.INTERACTION in ["silent", "earbud", "terminal"]:
+                        if config.INTERACTION in ["terminal"]:
                             commit_message = input("Commit message: ")
+                        elif config.INTERACTION in ["silent", "earbud"]:
+                            commit_message = gui.input_window("Commit message: ")
                         else:
                             interface.speak("What is the commit message?")
                             commit_message = interface.mic_input()
@@ -421,15 +423,13 @@ startExecution.run()
 # TODO make a chatbot feature
 
 # APIs
-# TODO get google calendar working
 # TODO get email working
 # TODO implement more APIs as below
-# TODO look for AI APIs like chat gpt
 
 # other
 # TODO get run other programs working
-# TODO add a input box for silent and earbud mode
-# TODO get a gui working
+# TODO add more functionality to the to do list
+# TODO add more functionality to google calendar
 
 """
 - use more APIs
@@ -438,4 +438,5 @@ startExecution.run()
     - SEO API
     - XKCD API
     - IBM watson text to speech
+    - AI APIs
 """
