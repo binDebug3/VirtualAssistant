@@ -53,11 +53,11 @@ Lila has a lot of functionality built into her. She can:
 - Perform computations with Wolfram Alpha
 - Take screenshots
 - Interact with your to-do list using Todoist
+- Pushing and pulling code
 
 Future functionality will include:
 - Interacting with your calendar using Google Calendar
 - Interacting with your email using Gmail
-- Pushing and pulling code
 - Running other custom programs
 - Report on the news
 - Engage in conversation
