@@ -5,7 +5,7 @@ import datetime
 from todoist_api_python.api import TodoistAPI
 
 
-api = TodoistAPI(config.todoist_api)
+todoist_api = TodoistAPI(config.todoist_api)
 
 def get_todo(day):
     present = {}
@@ -19,7 +19,7 @@ def get_todo(day):
         target_date = target_date.strftime("%Y-%m-%d")
 
     try:
-        tasks = api.get_tasks()
+        tasks = todoist_api.get_tasks()
     except Exception as error:
         print(error)
         return "Sorry, I can't get your tasks right now."
@@ -35,10 +35,10 @@ def get_todo(day):
             else:
                 future.update(todo)
 
-    return formet_list(abnormal, present, day)
+    return format_list(abnormal, present, day)
 
 
-def formet_list(abnormal, present, day):
+def format_list(abnormal, present, day):
     output = ""
 
     # recite abnormal tasks
@@ -79,3 +79,26 @@ def formet_list(abnormal, present, day):
                 output += "and "
 
     return output
+
+
+def add_task(name, date="today", label=None, recurring=None):
+    """
+    Add a task to Todoist.
+    :param
+        name: (string) The name of the task.
+        date: (string) The due date of the task.
+        label: (string) The label of the task.
+        recurring: (list of strings) The recurring days of the task.
+    :return:
+    """
+    raise NotImplementedError("This function is not implemented yet.")
+
+
+def mark_task(name):
+    """
+    Mark a task as complete in Todoist.
+    :param
+        name: (string) The name of the task.
+    :return:
+    """
+    raise NotImplementedError("This function is not implemented yet.")

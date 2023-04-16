@@ -4,6 +4,23 @@ import pyjokes
 import requests
 import json
 import logging
+import webbrowser
+
+
+def get_xkcd():
+    """
+    Fetches the latest XKCD comic and opens it in a new browser tab.
+    :return: None
+    """
+    # Fetch the latest XKCD comic URL
+    url = 'https://xkcd.com/info.0.json'
+    response = requests.get(url)
+    response.raise_for_status()
+    comic_data = response.json()
+    latest_comic_url = comic_data['img']
+
+    # Open the latest XKCD comic in a new browser tab
+    webbrowser.open_new_tab(latest_comic_url)
 
 
 def get_headlines():

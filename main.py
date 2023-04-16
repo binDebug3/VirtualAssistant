@@ -1,6 +1,6 @@
 from Lila import config, interface, toy
 from Lila.features import date_time, launch_app, open_website, weather, send_email, google_calendar, google_search, \
-    note, location, wikipedia_search, system, todo_list, youtube, news, gui
+    note, location, wikipedia_search, system, todo_list, youtube, news, gui, process_files
 
 import logging
 
@@ -176,7 +176,7 @@ class MainThread:
                     interface.output(stories, "info")
 
                 elif "check email" in command:
-                    labels = send_email.get_labels()
+                    labels = send_email.check_unread()
                     interface.output(labels, "info")
 
                 # SEND EMAIL
@@ -213,10 +213,43 @@ class MainThread:
                     interface.output(answer, "info")
 
                 # USE GOOGLE CALENDAR
-                elif "calendar" in command:
+                elif "check calendar" in command:
                     google_calendar.get_events(command)
                     logging.info("Action: Used the calendar")
 
+                # ADD CALENDAR EVENT
+                elif "add event" in command:
+                    interface.speak("What is the event called?")
+                    event_name = interface.mic_input()
+                    interface.speak("What day the event?")
+                    event_date = interface.mic_input()
+                    interface.speak("What time does the event start?")
+                    event_start = interface.mic_input()
+
+                    interface.speak("Would you like to customize the details further?")
+                    customize = interface.mic_input()
+
+                    if "yes" in customize:
+                        interface.speak("What time does the event end?")
+                        event_end = interface.mic_input()
+                        interface.speak("What color is the event?")
+                        color = interface.mic_input()
+                        interface.speak("How early should the notification be?")
+                        notification = interface.mic_input().split(" ")[0]
+                        interface.speak("What should I write in the description?")
+                        description = interface.mic_input()
+
+                        success = google_calendar.add_event(event_name, event_date, event_start,
+                                                            event_end, color, notification, description)
+                    else:
+                        success = google_calendar.add_event(event_name, event_date, event_start)
+
+                    if success:
+                        interface.output("Event added successfully", "info")
+                    else:
+                        interface.output("Sorry sir, I couldn't add that event", "error")
+
+                # CLOSE NOTES
                 elif "close notes" in command:
                     interface.output("Okay sir, closing notes", "info")
                     note.close_notes()
@@ -241,6 +274,11 @@ class MainThread:
                 elif "joke" in command:
                     joke = news.tell_joke()
                     interface.output(joke, "info")
+
+                # GET XKCD
+                elif "xkcd" in command:
+                    news.get_xkcd()
+                    interface.output("Here's the most recent x k c d comic", "info")
 
                 # SHOW SYSTEM INFO
                 elif "system info" in command:
@@ -318,6 +356,42 @@ class MainThread:
                         interface.output("Your battery is low. Please plug in your computer.", "warning",
                                          msg="Action: ")
 
+                # MERGE PDFS
+                elif "merge pdfs" in command:
+                    interface.speak("Please enter the p d fs you would like to merge")
+                    file_path1 = input("File path one:")
+                    file_path2 = input("File path two:")
+
+                    success, name = process_files.merge_pdfs(file_path1, file_path2)
+
+                    if success:
+                        interface.output(f"Successfully created {name}", "info")
+                    else:
+                        interface.output("Sorry sir, I couldn't merge those files", "error")
+
+                # CONVERT JUPITER NOTEBOOKS
+                elif "jupiter" in command:
+                    interface.speak("Please enter the jupiter notebook you would like to convert")
+                    file_path = input("File path:")
+
+                    success, name = process_files.convert_notebook(file_path)
+
+                    if success:
+                        interface.output(f"Successfully created {name}", "info")
+                    else:
+                        interface.output("Sorry sir, I couldn't convert that file", "error")
+
+                # EXTRACT TEXT
+                elif "extract text" in command:
+                    interface.speak("Please enter the file you would like to extract text from")
+                    file_path = input("File path:")
+
+                    success, name = process_files.extract_text(file_path)
+
+                    if success:
+                        interface.output(f"Successfully created {name}", "info")
+                    else:
+                        interface.output("Sorry sir, I couldn't extract text from that file", "error")
 
 
                 # DESCRIBE CAPABILITIES
@@ -429,21 +503,14 @@ startExecution.run()
 # TODO process gmails for me
 # TODO make a chatbot feature
 
-# APIs
-# TODO implement more APIs as below
-
 # other
 # TODO get run other programs working
-# TODO add more functionality to the to do list
-# TODO add more functionality to google calendar
-# TODO add more functionality to the email feature
+# TODO test and debug calendar functionality
+# TODO test and debug email functionality
+# TODO test pypdf2 functionality
+# TODO implement todoist functionality
 
 """
 - use more APIs
-    - text analysis
-    - scrapeninja or scrapestack
-    - SEO API
-    - XKCD API
-    - IBM watson text to speech
     - AI APIs
 """

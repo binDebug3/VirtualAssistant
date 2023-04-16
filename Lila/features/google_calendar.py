@@ -1,5 +1,5 @@
 from __future__ import print_function
-import datetime
+from datetime import datetime, timedelta
 import pytz
 import pickle
 import os.path
@@ -7,6 +7,7 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from googleapiclient.errors import HttpError
 
 from Lila import config, interface
 
@@ -15,7 +16,6 @@ MONTHS = ["january", "february", "march", "april", "may", "june", "july", "augus
 DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 DAY_EXTENSIONS = ["rd", "th", "st", "nd"]
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
-
 
 
 def authenticate_google():
@@ -51,6 +51,13 @@ def authenticate_google():
 
 
 def get_events(text):
+    """
+    Gets events from google calendar in the specified time interval
+    :param text:
+        text: (string) the text to parse to get the dates
+    :return:
+        None
+    """
     # dallin customize this so it ignores my college classes
 
     service = authenticate_google()
@@ -99,7 +106,14 @@ def get_events(text):
 
 
 def get_date(text):
-    today = datetime.date.today()
+    """
+    Gets the date from the text
+    :param text:
+           text: (string) the text to parse to get the dates
+    :return:
+        date: (datetime) the date that was parsed
+    """
+    today = datetime.today()
 
     if text.count("today") > 0:
         return today
@@ -149,7 +163,75 @@ def get_date(text):
         return datetime.date(month=month, day=day, year=year)
 
 
-# dallin add a way to create a new event
+def add_event(title, date, start,
+              end=None, color="Blueberry", notification=10, description="", recurring=None):
+    """
+    Add an event to the user's calendar
+    :param
+        title: (string) title of the event
+        start: (string) start time of the event
+        end: (string) end time of the event
+        date: (string) date of the event
+        color: (string) color of the event
+        notification: (int) notification time of the event
+        description: (string) description of the event
+        recurring: (string) when to recur the event
+    :return:
+    """
+    service = authenticate_google()
 
-# dallin add a way to create a new event from an email in gmail
+    # error handling
+    if end is None:
+        # if end time is not provided, set it to 1 hour after start time
+        start_time = datetime.strptime(start, '%H:%M')
+        end_time = start_time + timedelta(hours=1)
+        end = end_time.strftime('%H:%M')
+
+    if color not in ["Tomato", "Flamingo", "Tangerine", "Banana", "Sage", "Basil",
+                     "Peacock", "Blueberry", "Lavender", "Grape", "Graphite"]:
+        color = "Blueberry"
+
+    if type(notification) is not int:
+        notification = 10
+
+    # recurring = "RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR"
+
+    # Create event object
+    event = {
+        'summary': title,
+        'location': '',
+        'description': description,
+        'start': {
+            'dateTime': '{}T{}'.format(date, start),
+            'timeZone': config.timezone
+        },
+        'end': {
+            'dateTime': '{}T{}'.format(date, end),
+            'timeZone': config.timezone
+        },
+        'colorId': color,
+        'reminders': {
+            'useDefault': False,
+            'overrides': [
+                {'method': 'popup', 'minutes': notification},
+            ],
+        },
+    }
+
+    # Add recurrence if specified
+    if recurring:
+        event['recurrence'] = [
+            'RRULE:{}'.format(recurring),
+        ]
+
+    # Add event to calendar
+    try:
+        event = service.events().insert(calendarId='primary', body=event).execute()
+        print('Event created: %s' % (event.get('htmlLink')))
+    except HttpError as error:
+        print('An error occurred: %s' % error)
+        event = None
+        return False
+
+    return True
 
