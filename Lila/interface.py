@@ -30,7 +30,7 @@ def mic_input():
             print("Recognizing...")
             command = r.recognize_google(audio, language='en-in').lower()
             print(f"User said: {command}\n")
-        except:
+        except Exception:
             print("Say that again please...")
             command = mic_input()
         return command
@@ -107,6 +107,7 @@ def wish():
     speak("How can I help you today?")
     logging.info("Startup complete")
 
+
 def greetings():
     speak(random.choice(config.GREETINGS_RES))
 
@@ -124,11 +125,11 @@ def check_command(command):
     return proceed
 
 # get command
-def get_command():
+def get_command(title="Command"):
     if config.INTERACTION in ["silent", "earbud"]:
-        command = gui.input_window("Command").lower()
+        command = gui.input_window(title).lower()
     elif config.INTERACTION == "press":
-        gui.input_window("Press enter to speak: ")
+        gui.input_window(title)
         print("One moment please...")
         command = mic_input()
     elif config.INTERACTION == "terminal":
@@ -138,4 +139,3 @@ def get_command():
     logging.info("User said: " + command)
 
     return command, command.split(' ', 2)[-1]
-

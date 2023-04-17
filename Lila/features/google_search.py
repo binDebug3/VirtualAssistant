@@ -16,7 +16,7 @@ def google_search(prompt):
 
     if reg_ex:
         sub = reg_ex.group(1)
-        url = url + 'r/' + sub
+        # url = url + 'r/' + sub
 
     interface.speak('Okay!')
     interface.speak("Searching for " + search_for)

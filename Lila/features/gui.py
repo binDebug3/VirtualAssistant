@@ -9,6 +9,8 @@ font_color = "white"
 bg_color = "black"
 input_color = "#222222"
 input_value = ""
+input_box = None
+root = None
 
 # ---------------------------- FUNCTIONS ------------------------------- #
 def handle_enter(event=None):
@@ -56,7 +58,8 @@ def input_window(title=None):
     title_label.pack(side='left', padx=5)
 
     # Create close button in the custom title bar
-    close_button = tk.Button(title_bar, text='x', bg=bg_color, fg=font_color, font=(font, title_size), bd=0, command=root.destroy)
+    close_button = tk.Button(title_bar, text='x', bg=bg_color, fg=font_color, font=(font, title_size), bd=0,
+                             command=root.destroy)
     close_button.pack(padx=5, side='right')
 
     # ---------------------------- INPUT BOX ------------------------------- #

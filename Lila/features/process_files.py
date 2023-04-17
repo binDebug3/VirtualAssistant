@@ -1,37 +1,49 @@
 import PyPDF2
 import nbformat
+import os
+from Lila import config
 from nbconvert import PDFExporter
 
 
-def merge_pdfs(file_path1, file_path2):
+def merge_pdfs(file_path1=None, file_path2=None):
     """
     Merge two PDFs into one
     :param file_path1: (string) path to the first PDF
     :param file_path2: (string) path to the second PDF
-    :return:
-        True if the merge was successful, False otherwise
+    :return: True if the merge was successful, False otherwise
     """
     try:
+        # get default location
+        if file_path1 is None:
+            file_path1 = get_newest(config.dir_dict["volume 2 hw"])
+            if file_path1 is None:
+                file_path1 = input("Enter the path to the first PDF: ")
+
+        if file_path2 is None:
+            file_path2 = get_newest(config.dir_dict["volume 2 code"])
+            if file_path2 is None:
+                file_path2 = input("Enter the path to the second PDF: ")
+
         # Open the two PDF files in binary mode
         pdf1_file = open(file_path1, 'rb')
         pdf2_file = open(file_path2, 'rb')
 
         # Create a PDF reader object for each file
-        pdf1_reader = PyPDF2.PdfFileReader(pdf1_file)
-        pdf2_reader = PyPDF2.PdfFileReader(pdf2_file)
+        pdf1_reader = PyPDF2.PdfReader(pdf1_file)
+        pdf2_reader = PyPDF2.PdfReader(pdf2_file)
 
         # Create a PDF writer object to which the merged PDFs will be written
-        pdf_writer = PyPDF2.PdfFileWriter()
+        pdf_writer = PyPDF2.PdfWriter()
 
         # Add the pages of the first PDF to the writer object
-        for page_num in range(pdf1_reader.getNumPages()):
-            page = pdf1_reader.getPage(page_num)
-            pdf_writer.addPage(page)
+        for page_num in range(len(pdf1_reader.pages)):
+            page = pdf1_reader.pages[page_num]
+            pdf_writer.add_page(page)
 
         # Add the pages of the second PDF to the writer object
-        for page_num in range(pdf2_reader.getNumPages()):
-            page = pdf2_reader.getPage(page_num)
-            pdf_writer.addPage(page)
+        for page_num in range(len(pdf2_reader.pages)):
+            page = pdf2_reader.pages[page_num]
+            pdf_writer.add_page(page)
 
         # Write the merged PDF to a new file
         new_file = file_path1[:-4] + '_merged.pdf'
@@ -48,6 +60,20 @@ def merge_pdfs(file_path1, file_path2):
     except Exception as e:
         print(e)
         return False, None
+
+
+def get_newest(dir_path):
+    # Get all PDF files in the directory
+    files = [f for f in os.listdir(dir_path) if f.endswith('.pdf')]
+
+    # Sort PDF files by modification time (most recent first)
+    files = sorted(files, key=lambda f: os.path.getmtime(os.path.join(dir_path, f)), reverse=True)
+
+    # Get the most recently modified PDF file
+    if len(files) > 0:
+        return os.path.join(dir_path, files[0])
+    else:
+        return None
 
 
 def convert_notebook(notebook_path):
@@ -87,10 +113,10 @@ def extract_text(pdf_path):
     try:
         # Open the PDF file and read its contents
         with open(pdf_path, 'rb') as pdf_file:
-            pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
         pdf_text = ''
         for page in range(pdf_reader.numPages):
-            pdf_text += pdf_reader.getPage(page).extractText()
+            pdf_text += pdf_reader.pages[page].extractText()
 
         # Create a new text file and add the PDF text to it
         name = pdf_path[:-4] + '.txt'

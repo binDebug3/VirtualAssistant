@@ -1,5 +1,5 @@
 from __future__ import print_function
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import pytz
 import pickle
 import os.path
@@ -12,10 +12,11 @@ from googleapiclient.errors import HttpError
 from Lila import config, interface
 
 
-MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+MONTHS = ["january", "february", "march", "april", "may", "june",
+          "july", "august", "september", "october", "november", "december"]
 DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 DAY_EXTENSIONS = ["rd", "th", "st", "nd"]
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 
 def authenticate_google():
@@ -27,8 +28,7 @@ def authenticate_google():
     creds = None
 
     # The file token.pickle stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
+    # created automatically when the authorization flow completes for the first time.
 
     if os.path.exists(config.cal_token):
         with open(config.cal_token, 'rb') as token:
@@ -47,12 +47,12 @@ def authenticate_google():
         with open(config.cal_token, 'wb') as token:
             pickle.dump(creds, token)
 
-    return build('calendar', 'v3', credentials=creds)
+    return build('calendar', 'v3', credentials=creds, cache_discovery=False)
 
 
 def get_events(text):
     """
-    Gets events from google calendar in the specified time interval
+    Gets events from Google calendar in the specified time interval
     :param text:
         text: (string) the text to parse to get the dates
     :return:
@@ -64,34 +64,34 @@ def get_events(text):
     day = get_date(text)
 
     if day is None or not day:
-        return None
+        return False
 
     # Call the Calendar API
-    date = datetime.datetime.combine(day, datetime.datetime.min.time())
-    end_date = datetime.datetime.combine(day, datetime.datetime.max.time())
+    target_date = datetime.combine(day, datetime.min.time())
+    end_date = datetime.combine(day, datetime.max.time())
     utc = pytz.UTC
-    date = date.astimezone(utc)
+    target_date = target_date.astimezone(utc)
     end_date = end_date.astimezone(utc)
 
     events_result = service.events().list(calendarId='primary',
-                                          timeMin=date.isoformat(),
+                                          timeMin=target_date.isoformat(),
                                           timeMax=end_date.isoformat(),
                                           singleEvents=True,
                                           orderBy='startTime').execute()
     events = events_result.get('items', [])
 
     if not events:
-        interface.speak('No upcoming events found.')
+        interface.output('No upcoming events found.', "info")
     else:
         length = len(events)
         if length == 1:
-            interface.speak(f"You have one event on {day}.")
+            interface.output(f"You have one event on {day}.", "info")
         else:
-            interface.speak(f"You have {length} events on {day}.")
+            interface.output(f"You have {length} events on {str(day).split()[0]}.", "info")
 
         for event in events:
             start = event['start'].get('dateTime', event['start'].get('date'))
-            print(start, event['summary'])
+            # print(start, event['summary'])
 
             # hours
             start_time = str(start.split("T")[1].split("-")[0])
@@ -102,7 +102,9 @@ def get_events(text):
                 start_time = str(int(start_time.split(":")[0])-12) + start_time.split(":")[1]
                 start_time = start_time + "pm"
 
-            interface.speak(event["summary"] + " at " + start_time)
+            interface.output(event["summary"] + " at " + start_time, "info")
+
+    return True
 
 
 def get_date(text):
@@ -136,7 +138,7 @@ def get_date(text):
                 if found > 0:
                     try:
                         day = int(word[:found])
-                    except:
+                    except ValueError:
                         pass
 
     if month < today.month and month != -1:
@@ -157,38 +159,42 @@ def get_date(text):
             if text.count("next") >= 1:
                 dif += 7
 
-        return today + datetime.timedelta(dif)
+        return today + timedelta(dif)
 
     if day != -1:
-        return datetime.date(month=month, day=day, year=year)
+        return date(month=month, day=day, year=year)
 
 
-def add_event(title, date, start,
+def add_event(title, target_date, start,
               end=None, color="Blueberry", notification=10, description="", recurring=None):
     """
     Add an event to the user's calendar
-    :param
-        title: (string) title of the event
-        start: (string) start time of the event
-        end: (string) end time of the event
-        date: (string) date of the event
-        color: (string) color of the event
-        notification: (int) notification time of the event
-        description: (string) description of the event
-        recurring: (string) when to recur the event
-    :return:
+    :param title: (string) title of the event
+    :param start: (string) start time of the event
+    :param end: (string) end time of the event
+    :param date: (string) date of the event
+    :param color: (string) color of the event
+    :param notification: (int) notification time of the event
+    :param description: (string) description of the event
+    :param recurring: (string) when to recur the event
+    :return: True if event was added successfully, False otherwise
     """
+    colors = ["Tomato", "Flamingo", "Tangerine", "Banana", "Sage", "Basil",
+                     "Peacock", "Blueberry", "Lavender", "Grape", "Graphite"]
     service = authenticate_google()
+    start += ":00"
+    target_date = "2023-" + target_date
 
     # error handling
     if end is None:
         # if end time is not provided, set it to 1 hour after start time
-        start_time = datetime.strptime(start, '%H:%M')
+        start_time = datetime.strptime(start, '%H:%M:%S')
         end_time = start_time + timedelta(hours=1)
-        end = end_time.strftime('%H:%M')
+        end = end_time.strftime('%H:%M:%S')
+    else:
+        end += ":00"
 
-    if color not in ["Tomato", "Flamingo", "Tangerine", "Banana", "Sage", "Basil",
-                     "Peacock", "Blueberry", "Lavender", "Grape", "Graphite"]:
+    if color not in colors:
         color = "Blueberry"
 
     if type(notification) is not int:
@@ -202,14 +208,14 @@ def add_event(title, date, start,
         'location': '',
         'description': description,
         'start': {
-            'dateTime': '{}T{}'.format(date, start),
+            'dateTime': '{}T{}-06:00'.format(target_date, start),
             'timeZone': config.timezone
         },
         'end': {
-            'dateTime': '{}T{}'.format(date, end),
+            'dateTime': '{}T{}-06:00'.format(target_date, end),
             'timeZone': config.timezone
         },
-        'colorId': color,
+        'colorId': colors.index(color),
         'reminders': {
             'useDefault': False,
             'overrides': [
@@ -228,10 +234,7 @@ def add_event(title, date, start,
     try:
         event = service.events().insert(calendarId='primary', body=event).execute()
         print('Event created: %s' % (event.get('htmlLink')))
+        return True
     except HttpError as error:
         print('An error occurred: %s' % error)
-        event = None
         return False
-
-    return True
-

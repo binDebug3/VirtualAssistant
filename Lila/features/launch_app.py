@@ -6,6 +6,7 @@ import subprocess
 
 
 def get_path(interest, select_dict):
+    app = None
     for key in config.dict_app.keys():
         if key in interest:
             app = key

@@ -17,7 +17,7 @@ def parse_input(command):
 
     if city:
         return f"{place} is in {city}, {state}, {country}. " \
-                 f"It is {distance} miles away from {current}"
+               f"It is {distance} miles away from {current}"
     else:
         return f"{place} is in {state}, {country}. It is {distance} miles away from {current}"
 
@@ -25,13 +25,13 @@ def parse_input(command):
 def location(place):
     webbrowser.open("https://www.google.com/maps/place/" + place + "")
     geolocator = Nominatim(user_agent="myGeocoder", timeout=5)
-    location = geolocator.geocode(place, addressdetails=True)
+    locale = geolocator.geocode(place, addressdetails=True)
 
-    target_latlng = location.latitude, location.longitude
-    location = location.raw['address']
-    target_loc = {'city': location.get('city', ''),
-                   'state': location.get('state', ''),
-                   'country': location.get('country', '')}
+    target_latlng = locale.latitude, locale.longitude
+    locale = locale.raw['address']
+    target_loc = {'city': locale.get('city', ''),
+                  'state': locale.get('state', ''),
+                  'country': locale.get('country', '')}
 
     current_loc = geocoder.ip('me')
     current_latlng = current_loc.latlng

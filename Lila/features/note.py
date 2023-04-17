@@ -35,5 +35,3 @@ def show_image(interest):
     img = Image.open(image_path)
     img.show()
     time.sleep(2)
-
-

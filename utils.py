@@ -19,16 +19,22 @@ def save_interactions():
             writer.writerow(['Date', 'Time', 'Milli', 'Level', 'Message'])
 
             # Read each line from the log file and write it to the CSV file
+            message = ''
             for line in logged:
                 try:
-                    # Split the line into its components
-                    message_parts = line.strip().split(' & ')
+                    # Check if the line contains '&'
+                    if '&' in line:
+                        # If it does, split the line into its components
+                        message_parts = line.strip().split(' & ')
 
-                    # Extract the timestamp, level, and message from the message parts
-                    timestamp, milli = message_parts[0].split(',')
-                    date, time = timestamp.split(' ')
-                    level = message_parts[1]
-                    message = message_parts[2]
+                        # Extract the timestamp, level, and message from the message parts
+                        timestamp, milli = message_parts[0].split(',')
+                        date, time = timestamp.split(' ')
+                        level = message_parts[1]
+                        message = message_parts[2]
+                    else:
+                        # If it doesn't, append the line to the message of the previous row
+                        message += line.strip()
 
                     # Write the components to the CSV file
                     writer.writerow([date, time, milli, level, message])

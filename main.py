@@ -1,4 +1,4 @@
-from Lila import config, interface, toy
+from Lila import config, interface
 from Lila.features import date_time, launch_app, open_website, weather, send_email, google_calendar, google_search, \
     note, location, wikipedia_search, system, todo_list, youtube, news, gui, process_files
 
@@ -180,21 +180,22 @@ class MainThread:
                     interface.output(labels, "info")
 
                 # SEND EMAIL
-                elif "send an email" in command:
+                elif "send email" in command:
 
                     try:
                         interface.speak("Who should I send the email to?")
-                        recipient = interface.mic_input()
-                        rec_email = config.EMAIL_DIC[recipient]
+                        recipient, _ = interface.get_command("To whom?")
+                        # rec_email = config.EMAIL_DIC[recipient]
+                        rec_email = recipient
 
-                        if rec_email:
+                        if rec_email is not None:
                             interface.speak("What is the title?")
-                            subject = interface.mic_input()
+                            subject, _ = interface.get_command("Title?")
                             interface.speak("What should I say?")
-                            message = interface.mic_input()
+                            message, _ = interface.get_command("Body?")
                             msg = "Subject: {}\n\n{}".format(subject, message)
 
-                            success = send_email.mail(config.email, config.email_password, rec_email, msg)
+                            success, _ = send_email.send_email(subject, msg, rec_email)
 
                             if success:
                                 interface.output("Email sent successfully", "info")
@@ -214,30 +215,33 @@ class MainThread:
 
                 # USE GOOGLE CALENDAR
                 elif "check calendar" in command:
-                    google_calendar.get_events(command)
-                    logging.info("Action: Used the calendar")
+                    success = google_calendar.get_events(command)
+                    if success:
+                        interface.output("Action: Checked the calendar", "info")
+                    else:
+                        interface.output("Sorry sir, I couldn't access the calendar", "error")
 
                 # ADD CALENDAR EVENT
                 elif "add event" in command:
                     interface.speak("What is the event called?")
-                    event_name = interface.mic_input()
-                    interface.speak("What day the event?")
-                    event_date = interface.mic_input()
+                    event_name, _ = interface.get_command()
+                    interface.speak("What day is the event?")
+                    event_date, _ = interface.get_command()
                     interface.speak("What time does the event start?")
-                    event_start = interface.mic_input()
+                    event_start, _ = interface.get_command()
 
                     interface.speak("Would you like to customize the details further?")
-                    customize = interface.mic_input()
+                    customize, _ = interface.get_command()
 
                     if "yes" in customize:
                         interface.speak("What time does the event end?")
-                        event_end = interface.mic_input()
+                        event_end, _ = interface.get_command()
                         interface.speak("What color is the event?")
-                        color = interface.mic_input()
+                        color, _ = interface.get_command()
                         interface.speak("How early should the notification be?")
-                        notification = interface.mic_input().split(" ")[0]
+                        notification, _ = interface.get_command().split(" ")[0]
                         interface.speak("What should I write in the description?")
-                        description = interface.mic_input()
+                        description, _ = interface.get_command()
 
                         success = google_calendar.add_event(event_name, event_date, event_start,
                                                             event_end, color, notification, description)
@@ -357,12 +361,16 @@ class MainThread:
                                          msg="Action: ")
 
                 # MERGE PDFS
-                elif "merge pdfs" in command:
-                    interface.speak("Please enter the p d fs you would like to merge")
-                    file_path1 = input("File path one:")
-                    file_path2 = input("File path two:")
+                elif "merge pdf" in command:
+                    default = interface.get_command("Default?")
+                    if default != "no":
+                        success, name = process_files.merge_pdfs()
+                    else:
+                        interface.speak("Please enter the p d fs you would like to merge")
+                        file_path1 = input("File path one:")
+                        file_path2 = input("File path two:")
 
-                    success, name = process_files.merge_pdfs(file_path1, file_path2)
+                        success, name = process_files.merge_pdfs(file_path1, file_path2)
 
                     if success:
                         interface.output(f"Successfully created {name}", "info")
@@ -419,8 +427,6 @@ class MainThread:
                 # DESCRIBE UPCOMING FEATURES
                 elif "development" in command:
                     interface.speak("Right now, the features still in development are: "
-                                    "sending emails, "
-                                    "using google calendar, "
                                     "running other programs like Ava and Casper, "
                                     "interactive chats, "
                                     "and of course, incorporating chat gpt"
@@ -503,10 +509,8 @@ startExecution.run()
 # TODO process gmails for me
 # TODO make a chatbot feature
 
-# other
+# testing and debugging
 # TODO get run other programs working
-# TODO test and debug calendar functionality
-# TODO test and debug email functionality
 # TODO test pypdf2 functionality
 # TODO implement todoist functionality
 

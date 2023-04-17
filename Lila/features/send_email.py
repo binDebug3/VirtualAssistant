@@ -15,7 +15,7 @@ from googleapiclient.errors import HttpError
 
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
 def get_credentials():
     creds = None
@@ -50,7 +50,7 @@ def check_unread():
 
     try:
         # Call the Gmail API
-        service = build('gmail', 'v1', credentials=creds)
+        service = build('gmail', 'v1', credentials=creds, cache_discovery=False)
 
         # Define the search parameters for the email query
         today = datetime.today() + timedelta(days=1)
@@ -63,13 +63,14 @@ def check_unread():
         return process_query(result, service)
 
     except HttpError as error:
-        # TODO(developer) - Handle errors from gmail API.
         print(f'An error occurred: {error}')
 
 
 def process_query(result, service, detailed=False):
     # Process the results
     emails = []
+    sender, subject, received_time = None, None, None
+
     if 'messages' in result:
         messages = result['messages']
 
@@ -120,7 +121,7 @@ def send_email(subject, message_text, recipient):
 
     try:
         # Call the Gmail API
-        service = build('gmail', 'v1', credentials=creds)
+        service = build('gmail', 'v1', credentials=creds, cache_discovery=False)
 
         # Create the email message
         message = MIMEText(message_text)
@@ -131,12 +132,11 @@ def send_email(subject, message_text, recipient):
         create_message = {'raw': base64.urlsafe_b64encode(message.as_bytes()).decode()}
         send_message = (service.users().messages().send(userId='me', body=create_message).execute())
 
-        return send_message['id']
+        return True, send_message['id']
 
     except HttpError as error:
         print(f'An error occurred: {error}')
-        return None
-
+        return False, None
 
 
 def delete_email(identifier, mark_as_read=False):
@@ -152,7 +152,7 @@ def delete_email(identifier, mark_as_read=False):
 
     try:
         # Call the Gmail API
-        service = build('gmail', 'v1', credentials=creds)
+        service = build('gmail', 'v1', credentials=creds, cache_discovery=False)
 
         # Find the email message
         query = ' '.join(['"' + identifier + '"', 'in:all'])
@@ -198,12 +198,13 @@ def create_event():
 
     try:
         # Call the Gmail API
-        service = build('gmail', 'v1', credentials=creds)
+        service = build('gmail', 'v1', credentials=creds, cache_discovery=False)
 
         # Define the search parameters for the email query
         today = datetime.today() + timedelta(days=1)
         one_day_ago = today - timedelta(days=7)
-        query = "after:{} before:{} subject:{}".format(one_day_ago.strftime('%Y/%m/%d'), today.strftime('%Y/%m/%d'), "Event Details")
+        query = "after:{} before:{} subject:{}".format(one_day_ago.strftime('%Y/%m/%d'),
+                                                       today.strftime('%Y/%m/%d'), "Event Details")
 
         # Execute the email query
         result = service.users().messages().list(userId='me', q=query).execute()
@@ -216,7 +217,7 @@ def create_event():
         event_details = get_event_details(result['messages'][0]['id'], service)
 
         # Call the Calendar API
-        calendar_service = build('calendar', 'v3', credentials=creds)
+        calendar_service = build('calendar', 'v3', credentials=creds, cache_discovery=False)
         event = {
             'summary': event_details['title'],
             'location': event_details['location'],
@@ -247,7 +248,7 @@ def create_event():
 
 def get_event_details(msg_id, service):
     """
-    Extract the event details from an email message.
+    Extract the event details from an email message
     :param
         msg_id: (string) The id of the email message.
         service: (Gmail service object) The Gmail service object.
