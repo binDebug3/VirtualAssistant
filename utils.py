@@ -38,9 +38,11 @@ def save_interactions():
 
                     # Write the components to the CSV file
                     writer.writerow([date, time, milli, level, message])
-                except Exception:
+                except Exception as ex:
+                    print(ex)
                     error_count += 1
-    print(f"Error count while saving log file: {error_count}")
+    if error_count > 0:
+        print(f"Error count while saving log file: {error_count}")
 
 
 def show_session():
