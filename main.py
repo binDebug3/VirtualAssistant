@@ -1,3 +1,5 @@
+import os
+
 from Lila import config, interface
 from Lila.features import date_time, launch_app, open_website, weather, send_email, google_calendar, google_search, \
     note, location, wikipedia_search, system, todo_list, youtube, news, gui, process_files
@@ -434,6 +436,7 @@ class MainThread:
 
                 # REPORT KEYWORDS
                 elif "keyword" in command:
+                    os.system('start "excel.exe" "info/functionality.xlsx"')
                     interface.speak("Here is what I listen for in your commands: "
                                     "Lila will tell me to listen for a command, "
                                     "time, "
@@ -513,4 +516,5 @@ startExecution.run()
 # TODO get run other programs working
 # TODO test pypdf2 functionality
 # TODO implement todoist functionality
+# TODO fix gmail
 
