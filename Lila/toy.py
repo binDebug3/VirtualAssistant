@@ -1,7 +1,8 @@
 import pyautogui
 import numpy as np
 import time
-import cv2
+# import cv2
+import csv
 
 
 def find_blank_space():
